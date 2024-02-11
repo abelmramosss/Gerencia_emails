@@ -7,6 +7,7 @@ Açoes
 - Redistribuição
 - SLA (Tempo de resposta)
 - KPI (Medidor de performance)
+  
 ------------------Analise e teste das açoes----------------------
 salvamentos
 Duplicaçoes
