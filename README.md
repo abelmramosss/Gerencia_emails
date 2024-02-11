@@ -1,6 +1,6 @@
 # Gerencia_emails
- Unificar caixa de email e salvar em planilha
-Depurar todas as caixas
+Unificar caixa de email e salvar em planilha
+- Depurar todas as caixas
 listar as mesagens
 Açoes
 - Acertar WPP
