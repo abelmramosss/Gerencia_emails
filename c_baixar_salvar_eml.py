@@ -1,5 +1,6 @@
 import email
 import os
+import subprocess
 
 def baixar_emails(servidor, pasta_destino):
     _, data = servidor.search(None, 'ALL')
@@ -23,7 +24,18 @@ if __name__ == "__main__":
     servidor = conectar_servidor_email()  # Chame sua função para acessar o servidor de email aqui
 
     # Caminho da pasta para salvar os arquivos EML
-    pasta_destino = r'C:\Users\abelm\OneDrive\Documentos\GitHub\Gerencia_emails\eml'
+    pasta_destino = 'C:/Users/abelm/OneDrive/Documentos/EML_salvos'
 
     # Chame a função para baixar e salvar os emails
     baixar_emails(servidor, pasta_destino)
+
+    print("baixar_emails")
+
+    
+
+# Chamar o código d
+
+# Chamar o código d (d_filtragem.py)
+subprocess.run(["python", "d_filtragem.py"])
+
+
