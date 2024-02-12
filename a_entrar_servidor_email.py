@@ -1,5 +1,6 @@
 import imaplib
 import json
+from 3_baixar_salvar_eml import baixar_emails
 
 def carregar_configuracao(arquivo_config):
     with open(arquivo_config) as f:
@@ -22,6 +23,11 @@ def main():
     servidor = conectar_servidor_email(primeira_empresa['servidor'])
     servidor.login(primeira_empresa['email'], primeira_empresa['senha'])
     selecionar_caixa_entrada(servidor)
+    
+    # Chama a função para baixar e salvar os emails
+    pasta_destino = r'C:\Users\abelm\OneDrive\Documentos\GitHub\Gerencia_emails\eml'
+    baixar_emails(servidor, pasta_destino)
+    
     # Realize qualquer operação adicional aqui, se necessário
     servidor.close()
     servidor.logout()
