@@ -13,7 +13,7 @@ def selecionar_caixa_entrada(conexao):
 
 def main():
     # Carregar configuração
-    config = carregar_configuracao('acessos.json')
+    config = carregar_configuracao('2_acessos.json')
 
     # Apenas o primeiro email será usado por enquanto
     primeira_empresa = config['empresas'][0]
