@@ -1,0 +1,29 @@
+<!-- whitelist_page.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitelist Page</title>
+</head>
+<body>
+    <h1>Whitelist Page</h1>
+    <p>Adicione os domínios para a lista branca:</p>
+    <input type="text" id="domainInput">
+    <button onclick="addDomain()">Adicionar</button>
+    <ul id="domainList"></ul>
+
+    <script>
+        function addDomain() {
+            var input = document.getElementById("domainInput");
+            var domain = input.value;
+            var list = document.getElementById("domainList");
+            var listItem = document.createElement("li");
+            listItem.textContent = domain;
+            list.appendChild(listItem);
+            input.value = "";
+        }
+    </script>
+</body>
+</html>

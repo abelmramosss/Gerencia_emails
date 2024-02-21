@@ -1,0 +1,381 @@
+Delivered-To: toruloglogistica@gmail.com
+Received: by 2002:a05:6a10:328a:b0:530:13e5:4b5b with SMTP id k10csp2525394pxc;
+        Tue, 30 Jan 2024 10:44:30 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGvo6yBMYcNppS49+RH0lgDVt5YZvIM65SsptXaHqsXYjnlKaSD9ueFE9w7F7zR10rt8UAS
+X-Received: by 2002:ac8:584a:0:b0:42a:8922:9fc6 with SMTP id h10-20020ac8584a000000b0042a89229fc6mr9826235qth.57.1706640269430;
+        Tue, 30 Jan 2024 10:44:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706640269; cv=none;
+        d=google.com; s=arc-20160816;
+        b=w7+twUmRU1mNYdVJUfiuqbBi8tlZy/wffgbkJLkzSBwnBmHodBR9ITEhcR4SP6zG3p
+         FM0jOWrOAJ5DQTpGvxglhsNxK6lOltSyaBbq01KrZ02SiOzqkcodVEq2pQ7LMfgBOV+E
+         TNwFp5yi2MhTknqfXIXEPb49NPc/NxiAfrg0OC23LP3EK7hzvqsT4bkz8JWkyDirv738
+         Lq4ZWnZi2kqEm3RIl2Q6YQqz0hI43+3c/nBbKnrjLqB4lj2jqat7jmr49Udg4HkHGyy9
+         /n1LmYeC19BE0UAzml1bkVW3snhxnz49seWJENkVWIrNhjyzXaP1wxTZQZH/badUVBhq
+         LY5g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=subject:from:cc:to:content-language:user-agent:mime-version:date
+         :message-id;
+        bh=cnLmIscApbQLsFjh+AySic+U2eGCOvdvuPY8C650o0A=;
+        fh=+lF3TssfGCBa0QPRlzg9L2FAXkbH3ChJuDPzX6kepFk=;
+        b=CX99SUeq6bqGfMB2L+DoOdGrA5ct2kbDgUiHX45GVPEsTP9ypuYZDsi+Y6J0hqeSNO
+         Qg3JU5L2w7mCH39Q612+s00MPOQ34FgJjQJFzfTFb94I75f4R5wTqlm2Nw2RgpC+pUKe
+         asnG1vMlB8pRxoyrsoScTexifHyPlwNXAdkQwRs5ltMVno6VyBSHSwGzlvcAFjygTVNM
+         P2EwYc5+wmwkRKneOePNrf2gVu8Mz/0ozLVKt0OmOy/aT0uIswJOHVvgVQOQqkzdq39R
+         2QVh3WwYdg4N5MFtBit1DX9XmoHWe9DsSsh3NUnabRQW4/sdTi2sOXU2WWWaYnu6a1BL
+         WOUQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of lilian.sene@torulog.com.br designates 44.202.169.33 as permitted sender) smtp.mailfrom=lilian.sene@torulog.com.br
+Return-Path: <lilian.sene@torulog.com.br>
+Received: from omta034.useast.a.cloudfilter.net (omta034.useast.a.cloudfilter.net. [44.202.169.33])
+        by mx.google.com with ESMTPS id n8-20020ac85a08000000b004257cd80ab3si10827134qta.146.2024.01.30.10.44.29
+        for <toruloglogistica@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 30 Jan 2024 10:44:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of lilian.sene@torulog.com.br designates 44.202.169.33 as permitted sender) client-ip=44.202.169.33;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of lilian.sene@torulog.com.br designates 44.202.169.33 as permitted sender) smtp.mailfrom=lilian.sene@torulog.com.br
+Received: from eig-obgw-5005a.ext.cloudfilter.net ([10.0.29.234])
+	by cmsmtp with ESMTPS
+	id UpH5r9C3OAxAkUt6FrBCUE; Tue, 30 Jan 2024 18:44:47 +0000
+Received: from sh-pro16.hostgator.com.br ([162.241.60.112])
+	by cmsmtp with ESMTPS
+	id Ut31rqiQhfs4hUt31rSWx4; Tue, 30 Jan 2024 18:41:27 +0000
+X-Authority-Analysis: v=2.4 cv=Q6TBXq6a c=1 sm=1 tr=0 ts=65b942d7
+ a=3doCq9P6mh9rLCyYmCcnvQ==:117 a=3doCq9P6mh9rLCyYmCcnvQ==:17
+ a=dEuoMetlWLkA:10 a=BKpAeEf8ozMA:10 a=5KLPUuaC_9wA:10
+ a=r77TgQKjGQsHNAKrUKIA:9 a=vIgyc-IIAAAA:8 a=1cRiD_rjAAAA:8 a=BkpHzsgbAAAA:8
+ a=6F8FqG5_AAAA:20 a=C2tUcgPOzHY-r9AuVgAA:9 a=3ZKOabzyN94A:10
+ a=QEXdDO2ut3YA:10 a=_vPlxUM9AAAA:8 a=3g80flMcAAAA:8 a=GT1FQX9uAAAA:8
+ a=hldzaHOBq20_a6nkNpQA:9 a=BhMdqm2Wqc4Q2JL7t0yJfBCtM/Y=:19
+ a=JYCYCCIFkaegZxDu:21 a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10 a=ouV8bqFNGZoA:10
+ a=Q8r8yNMS005wZw-DgzcA:9 a=HXjIzolwW10A:10 a=T6a71-JsGAwA:10 a=SSmOFEACAAAA:8
+ a=kGnZ6xUd-mVzK6XJAfQA:9 a=jC5PnbyareZ0aGlQ:21 a=ya5i7YzpaYYA:10
+ a=z6Pj7PA89W7CS5wXn6-b:22 a=NWVoK91CQySWRX1oVYDe:22 a=lAIPu-TSoPCgWs-2gwLQ:22
+ a=qLmLTr83pXW6mQV1C_vq:22 a=blX6IingZl8_hwIj0iom:22 a=3OzwZZK9wuBjIL5KE02K:22
+ a=v-qSr-_IHA66GWFCoi7P:22
+Received: from [201.75.167.22] (port=3487 helo=[192.168.0.114])
+	by sh-pro16.hostgator.com.br with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <lilian.sene@torulog.com.br>)
+	id 1rUt30-004MpW-35;
+	Tue, 30 Jan 2024 15:41:27 -0300
+Content-Type: multipart/mixed; boundary="------------wNJIvgGhKM5DrAyT7CEgNPjP"
+Message-ID: <90356a9a-5d61-4849-96cb-8e36b4a28a48@torulog.com.br>
+Date: Tue, 30 Jan 2024 15:41:24 -0300
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Content-Language: pt-BR
+To: gerentelogistica@mapmateriais.com.br, qualidade1@mapmateriais.com.br
+Cc: 'TORULOG LOGISTICA LTDA' <planejamento@torulog.com.br>
+From: Lilian Sene <lilian.sene@torulog.com.br>
+Subject: =?UTF-8?Q?Torulog_-_Fechamento_2=C2=B0_quinzena_Fracionado_-_Fatura?=
+ =?UTF-8?Q?_482?=
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - sh-pro16.hostgator.com.br
+X-AntiAbuse: Original Domain - torulog.com.br
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - torulog.com.br
+X-BWhitelist: no
+X-Source-IP: 201.75.167.22
+X-Source-L: No
+X-Exim-ID: 1rUt30-004MpW-35
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: ([192.168.0.114]) [201.75.167.22]:3487
+X-Source-Auth: lilian.sene@torulog.com.br
+X-Email-Count: 7
+X-Org: HG=hgshared_brpro;ORG=latam;
+X-Source-Cap: cG90ZW4zNjU7cG90ZW4zNjU7c2gtcHJvMTYuaG9zdGdhdG9yLmNvbS5icg==
+X-Local-Domain: yes
+X-CMAE-Envelope: MS4xfJcTSl+BM9ufaPaHK7fqRTIjR5Nn+8Tv8GZjCiOEcy/aX2aKir4Pg803SLC/BH/z7mHxP+A8iKBiBSm2YxFxepjJ46tmEskYo3bSzZieYoa7Cb0APJie
+ 2ro2e4nZ/CTYR8f0t+KQfFOEr2IZ+k9a6T718cz6xCFkNTSZ3UNpoPSY80lzEo2RRiJlzW/ZUOmzntGl6NjViq9510M85wrk/kLb93ns1cOkuYhY7HCUJkq6
+
+This is a multi-part message in MIME format.
+--------------wNJIvgGhKM5DrAyT7CEgNPjP
+Content-Type: multipart/alternative;
+ boundary="------------SuPSfgUh5yHYxMxWbBlvIrby"
+
+--------------SuPSfgUh5yHYxMxWbBlvIrby
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Prezados ótima tarde!!!
+
+Segue link com a fatura, boleto e arquivos XML/PDF. Gentileza se atentar 
+ao prazo de validade para o downloads.
+
+Gentileza confirmar recebimento, se houver algum problema entrar em 
+contato comigo.
+
+
+Vinculei 1 arquivo a este email:
+
+  * MAP 482.zip
+    <https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ>
+    Tamanho: 21,3MB
+    Data de validade: 02/02/2024, 15:41 BRT
+    Limite de downloads: 3
+    Serviço de anexo online: Thunderbird Send
+    Link:
+    https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ
+    <https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ>
+
+
+-- 
+
+Atenciosamente,
+
+Logo da Empresa <https://www.torulog.com.br/>
+
+*Lilian Sene*
+
+/Relacionamento com Clientes/
+
+Telefone: (12)97409-9825
+
+Endereço: Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí - SP, 
+12327-673
+
+Ícone do instagram <https://www.instagram.com/torulog/> Ícone do 
+WhatsApp 
+<https://api.whatsapp.com/send?phone=5512974099825&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!> 
+
+
+--------------SuPSfgUh5yHYxMxWbBlvIrby
+Content-Type: multipart/related;
+ boundary="------------pgPSTiLjq3OY8PzRsw2Ixck2"
+
+--------------pgPSTiLjq3OY8PzRsw2Ixck2
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>Prezados ótima tarde!!!</p>
+    <p>Segue link com a fatura, boleto e arquivos XML/PDF. Gentileza se
+      atentar ao prazo de validade para o downloads.</p>
+    <p> Gentileza confirmar recebimento, se houver algum problema entrar
+      em contato comigo. <br>
+    </p>
+    <p><br>
+    </p>
+    <div style="padding: 15px; background-color: rgb(217, 237, 255);">
+      <div style="margin-bottom: 15px;">Vinculei 1 arquivo a este email:</div>
+      <ul
+style="background-color: rgb(255, 255, 255); padding: 15px; list-style-type: none;">
+        <li
+style="border: 1px solid rgb(205, 205, 205); border-radius: 5px; margin-top: 10px; margin-bottom: 10px; padding: 15px; display: grid; grid-template-columns: 0fr 1fr 0fr 0fr; align-items: center;"
+          class="cloudAttachmentItem"
+data-content-location="https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ"
+          data-service-name="Thunderbird Send" data-service-url=""><a
+href="https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ"
+style="color: rgb(15, 126, 219) !important; grid-area: 1 / 2;"
+            moz-do-not-send="true" class="cloudfile-name">MAP 482.zip</a><img
+            class="paperClipIcon"
+            style="grid-area: 1 / 1; margin-right: 5px;" alt=""
+            src="cid:part1.edjHOPsi.LTWexf1z@torulog.com.br" width="32"
+            height="32"><img class="cloudfile-service-icon"
+            style="grid-area: 1 / 3; margin: 0px 5px;" alt=""
+            src="https://send.vis.ee/icon.718f87fb.svg" width="32"
+            height="32"><br>
+          <span style="grid-column: 2 / span 3; font-size: small;"><span>Tamanho:
+            </span><span style="color: rgb(89, 89, 89);"
+              class="cloudfile-size">21,3MB</span><br>
+          </span><span
+            style="grid-column: 2 / span 3; font-size: small;"><span>Data
+              de validade: </span><span style="color: rgb(89, 89, 89);"
+              class="cloudfile-expiry-date">02/02/2024, 15:41 BRT</span><br>
+          </span><span
+            style="grid-column: 2 / span 3; font-size: small;"><span>Limite
+              de downloads: </span><span
+              style="color: rgb(89, 89, 89);"
+              class="cloudfile-download-limit">3</span><br>
+          </span><span style="display: none;">Serviço de anexo online: </span><span
+style="grid-area: 1 / 4; color: rgb(89, 89, 89); font-size: small;"
+            class="cloudfile-service-name">Thunderbird Send</span><br>
+          <span style="grid-column: 2 / span 3; font-size: small;"><span>Link:
+            </span><a
+href="https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ"
+              style="color: rgb(89, 89, 89) !important;"
+              class="cloudfile-link moz-txt-link-freetext">https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ</a><br>
+          </span><br>
+        </li>
+      </ul>
+      <div></div>
+    </div>
+    <p><br>
+    </p>
+    <p></p>
+    <div class="moz-signature">-- <br>
+      <meta charset="UTF-8">
+      <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+      <style>
+        /* Estilos CSS para a assinatura */
+        @media only screen and (max-width: 600px) {
+            .email-signature {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+            }
+            .email-signature img {
+                width: 70px !important;
+            }
+            .email-signature .social-icons {
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+            .email-signature .social-icons a {
+                display: inline-block !important;
+                margin-right: 5px !important;
+            }
+            .email-signature .banner {
+                text-align: center !important;
+                margin-top: 20px !important;
+            }
+        }
+    </style>
+      <p>Atenciosamente,</p>
+      <table class="email-signature" width="100%" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 1º Logotipo --> <a
+                href="https://www.torulog.com.br/" target="_blank"> <img
+src="https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator-brasil-v1-0-7%2F557%2F516557%2FLYRHHVhQ%2F936f5c81cf484b6caf1e9584e00a1665&amp;methods=resize%2C500%2C5000"
+                  alt="Logo da Empresa"
+                  style="display: block; border: 0;" width="70"> </a> </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 2º Nome e Cargo -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 14px; margin: 5px 0;">
+                <strong>Lilian Sene</strong> </p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;"> <em>Relacionamento
+                  com Clientes</em> </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 3º Telefone e Endereço -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 5px 0;">Telefone:
+                (12)97409-9825</p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;">Endereço:
+                Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí -
+                SP, 12327-673</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 4º Ícones de Redes Sociais -->
+              <div class="social-icons"> <a
+                  href="https://www.instagram.com/torulog/"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-1.png"
+                    alt="Ícone do instagram"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> <a
+href="https://api.whatsapp.com/send?phone=5512974099825&amp;text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/whatsapp-icone-2.png"
+                    alt="Ícone do WhatsApp"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+--------------pgPSTiLjq3OY8PzRsw2Ixck2
+Content-Type: image/png; name="mZg3PFAtxhgrzT0B.png"
+Content-Disposition: inline; filename="mZg3PFAtxhgrzT0B.png"
+Content-Id: <part1.edjHOPsi.LTWexf1z@torulog.com.br>
+Content-Transfer-Encoding: base64
+
+iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7DAAAOwwHHb6hk
+AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVFJREFUWIXtl8FKw0AQ
+hj8EbQ/p0Ut8AVEPgYLUB+i5L6J9E0Wtr1HPgl48WU8K1Tfw4LktxUAhHvZfiMXUbdhVhB0Y
+ms78M/NldwkJuFsD6AMjYCYfASfKBbUd4BkoKvxJmiDWKA1/AXrAtrynmIUIshJ9DXgEmt/k
+m8oVwHEIANu8u0LTleYhBMBUzZMVmkSaSQgAe9DW1d3L/wzAqW6jJpQ3+5cA3vbW1Vz3Np6B
+CBABIkAE+DWAmX7TUixdynm15Wf6jf5fa3Cq60K5qrraNuHrK1kbmJcGWJ8rB9DC4yvaq5od
+lmK7wBB4lw8Vs9ZRzdgHwLmaXa5RM1DNmQ+AA2ABfACZgz4DctXs+QAAuMLc0dsPEJk0BXDh
+azjAFnCnxjlmiTuYg5kAR4rl0twCmz4BLMQAs7RVH6kLzJ17H162fczhGmO+mqa6PqXGnn8C
+xMN0PcC9DrQAAAAASUVORK5CYII=
+
+--------------pgPSTiLjq3OY8PzRsw2Ixck2--
+
+
+--------------SuPSfgUh5yHYxMxWbBlvIrby--
+--------------wNJIvgGhKM5DrAyT7CEgNPjP
+Content-Type: text/html; charset=utf-8
+Content-Disposition: attachment; filename="MAP 482.zip.html"
+X-Mozilla-Cloud-Part: cloudFile;
+ url=https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJxCXQ
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>MAP 482.zip - Anexo online</title>
+  <meta charset=3D"utf-8" />
+ </head>
+ <body>
+  <div style=3D"padding: 15px; font-family: Calibri, sans-serif;">
+   <div style=3D"margin-bottom: 15px;" id=3D"cloudAttachmentListHeader">O=
+ arquivo MAP 482.zip foi anexado como um anexo online. Ele pode ser baixa=
+do a partir do link abaixo.</div>
+   <ul><li xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"border: 1px so=
+lid rgb(205, 205, 205); border-radius: 5px; margin-top: 10px; margin-bott=
+om: 10px; padding: 15px; display: grid; grid-template-columns: 0fr 1fr 0f=
+r 0fr; align-items: center;" class=3D"cloudAttachmentItem" data-content-l=
+ocation=3D"https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X=
+2qJxCXQ" data-service-name=3D"Thunderbird Send" data-service-url=3D""><a =
+href=3D"https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7pY54X2qJ=
+xCXQ" style=3D"color: rgb(15, 126, 219) !important; grid-area: 1 / 2;" mo=
+z-do-not-send=3D"true" class=3D"cloudfile-name">MAP 482.zip</a><img class=
+=3D"paperClipIcon" style=3D"grid-area: 1 / 1; margin-right: 5px;" alt=3D"=
+" src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzen=
+r0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3J=
+nm+48GgAAAVFJREFUWIXtl8FKw0AQhj8EbQ/p0Ut8AVEPgYLUB+i5L6J9E0Wtr1HPgl48WU8K=
+1Tfw4LktxUAhHvZfiMXUbdhVhB0Yms78M/NldwkJuFsD6AMjYCYfASfKBbUd4BkoKvxJmiDWK=
+A1/AXrAtrynmIUIshJ9DXgEmt/km8oVwHEIANu8u0LTleYhBMBUzZMVmkSaSQgAe9DW1d3L/w=
+zAqW6jJpQ3+5cA3vbW1Vz3Np6BCBABIkAE+DWAmX7TUixdynm15Wf6jf5fa3Cq60K5qrraNuH=
+rK1kbmJcGWJ8rB9DC4yvaq5odlmK7wBB4lw8Vs9ZRzdgHwLmaXa5RM1DNmQ+AA2ABfACZgz4D=
+ctXs+QAAuMLc0dsPEJk0BXDhazjAFnCnxjlmiTuYg5kAR4rl0twCmz4BLMQAs7RVH6kLzJ17H=
+162fczhGmO+mqa6PqXGnn8CxMN0PcC9DrQAAAAASUVORK5CYII=3D" width=3D"32" heigh=
+t=3D"32" /><img class=3D"cloudfile-service-icon" style=3D"grid-area: 1 / =
+3; margin: 0px 5px;" alt=3D"" src=3D"https://send.vis.ee/icon.718f87fb.sv=
+g" width=3D"32" height=3D"32" /><br /><span style=3D"grid-column: 2 / spa=
+n 3; font-size: small;"><span>Tamanho: </span><span style=3D"color: rgb(8=
+9, 89, 89);" class=3D"cloudfile-size">21,3MB</span><br /></span><span sty=
+le=3D"grid-column: 2 / span 3; font-size: small;"><span>Data de validade:=
+ </span><span style=3D"color: rgb(89, 89, 89);" class=3D"cloudfile-expiry=
+-date">02/02/2024, 15:41 BRT</span><br /></span><span style=3D"grid-colum=
+n: 2 / span 3; font-size: small;"><span>Limite de downloads: </span><span=
+ style=3D"color: rgb(89, 89, 89);" class=3D"cloudfile-download-limit">3</=
+span><br /></span><span style=3D"display: none;">Servi=C3=A7o de anexo on=
+line: </span><span style=3D"grid-area: 1 / 4; color: rgb(89, 89, 89); fon=
+t-size: small;" class=3D"cloudfile-service-name">Thunderbird Send</span><=
+br /><span style=3D"grid-column: 2 / span 3; font-size: small;"><span>Lin=
+k: </span><a href=3D"https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0C=
+c9BS7pY54X2qJxCXQ" style=3D"color: rgb(89, 89, 89) !important;" class=3D"=
+cloudfile-link">https://send.vis.ee/download/2ce4a449c0e41a83/#pkI0Cc9BS7=
+pY54X2qJxCXQ</a><br /></span><br /></li></ul>
+  </div>
+ </body>
+</html>
+
+--------------wNJIvgGhKM5DrAyT7CEgNPjP--

@@ -1,0 +1,331 @@
+Delivered-To: toruloglogistica@gmail.com
+Received: by 2002:a05:6a10:1147:b0:533:8940:a5f6 with SMTP id s7csp428977pxh;
+        Thu, 8 Feb 2024 09:21:50 -0800 (PST)
+X-Forwarded-Encrypted: i=2; AJvYcCVpoWYAkmf6171ijBopblMJxHncmPk4VlKqmDwQ9xjxMUX/5fxI9XPY5OClyA4ChJokxfUHg/k8Ovxiy8bKmA5l367l7m/D6vAyNg==
+X-Google-Smtp-Source: AGHT+IEiDL7HCRcuq0QePFPmAZqnnsTlvkjXJ6+lMniXEP5WPwNzKwH8rlCUbx0brAtKpuLPBbw5
+X-Received: by 2002:a05:6a00:9399:b0:6db:d0e1:3357 with SMTP id ka25-20020a056a00939900b006dbd0e13357mr7037157pfb.22.1707412910430;
+        Thu, 08 Feb 2024 09:21:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1707412910; cv=none;
+        d=google.com; s=arc-20160816;
+        b=E++0EghewD0iS/yW2EewXxRcYtAODTdovlGjY1JQsOrzSGgx/y44LGi5Mbl7Dj1mLE
+         GDnPa5uegKpN0KkVZqNpqHmcj1rRfhuIAv/NNGgDGc8dtngiVM+7tJ9f8d+AM7ANaOUE
+         6lVrIZV2bHnBrz+szBlm0yfl/sjddNha/J1+u3K9M85BV4vr8EMNi42Gt/RMI0HMuEOv
+         +RgioWEEj0Q9heihzPRTYsYEqpv5raqWkS+kyh6zAGsca1yIW9/5kv+LDRddPPHg/sFG
+         Q6t20o8M15ahLsQG9bUqb+ZOwZBivugoz7hW+qv6IVF3+bgOYhHjGPYL9bfq9viE13Zi
+         rFbg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:from:to:content-language:references:subject:user-agent
+         :mime-version:date:message-id;
+        bh=ac9Q1H4Exr2PLMq59D6uLX6Em3IgGz38YJaSsjjmxdo=;
+        fh=D+JbClPw8tQfV3BbSobam8DcyPQbGzhiIqlE5aKVUFA=;
+        b=aAAdBhCA0W8zUiwSTOSdB+6sOl4bGKr4xGusX4xcysSxOgERc3RrY5PCOU21CdByU2
+         6gCz3fzDGoXagZdkDyjfgxojrHnNnx7ZeRlDmTxXlOdz1g59UyF5twKKciCYso+dvONf
+         B8AbJrnSXRvTVAT3C0A4O9Bxpx8wJd5QrCOSj4h/sqPdSRZLoTp1CAa7794T48UCnJ75
+         nxTE3RVcdlyQQV1dCYWehfM8iWKk/Q+OtGMwTr7WpjhUfaOlfj8DWpYEnvWY9ao1s3cX
+         y0+v8AKnaU3zIKLmHm4xplRwbLJ4FohpfXBKCxo6cmAyh+S6f09KrOR+JfBM4dIHK0Hr
+         KUSA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of abel.ramos@torulog.com.br designates 35.89.44.39 as permitted sender) smtp.mailfrom=abel.ramos@torulog.com.br
+X-Forwarded-Encrypted: i=1; AJvYcCUTTnLyjTyxxZn1UWLF6TeD1oNfDGwz+LccKzGoumP95RFtW5uJ/gjl9aZPg9JJETIEMroFfWgnBKCYVS5cEcIQgEpVui8IDaYRLw==
+Return-Path: <abel.ramos@torulog.com.br>
+Received: from omta40.uswest2.a.cloudfilter.net (omta40.uswest2.a.cloudfilter.net. [35.89.44.39])
+        by mx.google.com with ESMTPS id a8-20020a62d408000000b006e04c5c9a8csi4198257pfh.234.2024.02.08.09.21.49
+        for <toruloglogistica@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 08 Feb 2024 09:21:49 -0800 (PST)
+Received-SPF: pass (google.com: domain of abel.ramos@torulog.com.br designates 35.89.44.39 as permitted sender) client-ip=35.89.44.39;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of abel.ramos@torulog.com.br designates 35.89.44.39 as permitted sender) smtp.mailfrom=abel.ramos@torulog.com.br
+Received: from eig-obgw-5001a.ext.cloudfilter.net ([10.0.29.139])
+	by cmsmtp with ESMTPS
+	id Y42wrSM5a80oiY85trE5Ly; Thu, 08 Feb 2024 17:21:49 +0000
+Received: from sh-pro16.hostgator.com.br ([162.241.60.112])
+	by cmsmtp with ESMTPS
+	id Y82xrorPyz7cDY82xr40Ng; Thu, 08 Feb 2024 17:18:47 +0000
+X-Authority-Analysis: v=2.4 cv=JccfrlKV c=1 sm=1 tr=0 ts=65c50cf7
+ a=3doCq9P6mh9rLCyYmCcnvQ==:117 a=3doCq9P6mh9rLCyYmCcnvQ==:17
+ a=k7vzHIieQBIA:10 a=BKpAeEf8ozMA:10 a=r77TgQKjGQsHNAKrUKIA:9 a=1cRiD_rjAAAA:8
+ a=BkpHzsgbAAAA:8 a=6F8FqG5_AAAA:20 a=pGLkceISAAAA:8 a=Ph4T1ZvIAAAA:20
+ a=8FZ-GgMoYhIh6u5YM60A:9 a=3ZKOabzyN94A:10 a=QEXdDO2ut3YA:10
+ a=8LfgHNaa6p4A:10 a=_vPlxUM9AAAA:8 a=3g80flMcAAAA:8 a=GT1FQX9uAAAA:8
+ a=3NG_bfh_dtcPtsDWeLIA:9 a=BhMdqm2Wqc4Q2JL7t0yJfBCtM/Y=:19
+ a=bwAbJCatvl08LxhJ:21 a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10 a=ouV8bqFNGZoA:10
+ a=z6Pj7PA89W7CS5wXn6-b:22 a=NWVoK91CQySWRX1oVYDe:22 a=lAIPu-TSoPCgWs-2gwLQ:22
+ a=blX6IingZl8_hwIj0iom:22 a=3OzwZZK9wuBjIL5KE02K:22 a=v-qSr-_IHA66GWFCoi7P:22
+Received: from [187.57.184.106] (port=53843 helo=[192.168.15.129])
+	by sh-pro16.hostgator.com.br with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <abel.ramos@torulog.com.br>)
+	id 1rY82w-001sr8-2i
+	for planejamento@torulog.com.br;
+	Thu, 08 Feb 2024 14:18:47 -0300
+Content-Type: multipart/alternative;
+ boundary="------------ORSfGGeUMCE5LfPie0648KZf"
+Message-ID: <32cf7dac-edf1-4400-a423-f5fbdc5829e0@torulog.com.br>
+Date: Thu, 8 Feb 2024 14:18:42 -0300
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Fwd: TOR - Severino - Operacional - Pagamento - Terceiro
+References: <autogen-java-55fd80a1-0928-4c60-b477-e0f374cb1a03@google.com>
+Content-Language: pt-BR
+To: "planejamento@torulog.com.br" <planejamento@torulog.com.br>
+From: ABEL RAMOS <abel.ramos@torulog.com.br>
+In-Reply-To: <autogen-java-55fd80a1-0928-4c60-b477-e0f374cb1a03@google.com>
+X-Forwarded-Message-Id: <autogen-java-55fd80a1-0928-4c60-b477-e0f374cb1a03@google.com>
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - sh-pro16.hostgator.com.br
+X-AntiAbuse: Original Domain - torulog.com.br
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - torulog.com.br
+X-BWhitelist: no
+X-Source-IP: 187.57.184.106
+X-Source-L: No
+X-Exim-ID: 1rY82w-001sr8-2i
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: ([192.168.15.129]) [187.57.184.106]:53843
+X-Source-Auth: abel.ramos@torulog.com.br
+X-Email-Count: 6
+X-Org: HG=hgshared_brpro;ORG=latam;
+X-Source-Cap: cG90ZW4zNjU7cG90ZW4zNjU7c2gtcHJvMTYuaG9zdGdhdG9yLmNvbS5icg==
+X-Local-Domain: yes
+X-CMAE-Envelope: MS4xfA1FrYfUWzMBjZJ0QUfNFP1NE2eUcaA0zvSohHd2FAmhVD2jCAaWlZ84zKRUZ/73BtFWZRk8NBpj/ZVvcSScksVyxw6I/tnAXgIlZzW1ceWoNKOGz7ae
+ DPplAcSb8zCbD7ekThQ0TVdf1yrZvA18Mz39xR4/LEq2yrCC6UJOrsypTyum12NJNGE2tTQ8OCBpnGDiuKH7e6EyyjXxL9K6/nG2VrSShOR3OCkMwtOULSzX
+
+This is a multi-part message in MIME format.
+--------------ORSfGGeUMCE5LfPie0648KZf
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Teste
+
+teste
+
+Atenciosamente,
+
+Logo da Empresa <https://www.torulog.com.br/>
+
+*Abel Ramos*
+
+/Gerente de Planejamento/
+
+Telefone: ( 12)988073788
+
+Endereço: Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí - SP, 
+12327-673
+
+Ícone do Facebook <https://www.instagram.com/torulog/> Ícone do LinkedIn 
+<https://api.whatsapp.com/send?phone=5512974099825&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!> 
+
+
+
+
+-------- Mensagem encaminhada --------
+Assunto: 	TOR - Severino - Operacional - Pagamento - Terceiro
+Data: 	Thu, 08 Feb 2024 16:34:51 +0000
+De: 	abelmramosss@gmail.com
+Para: 	planejamento@torulog.com.br
+
+
+
+Ola Prezados,
+
+Gentileza realizar lançamento no sistema Active.
+
+Obs: O número do ID é a referência de rastreio.
+
+ID:____________________________________ TLLC0000112
+2.0 - Data de Excução:_________________ Wed Feb 07 2024 00:00:00 
+GMT-0300 (Brasilia Standard Time)
+1.0 - Nome:____________________________ Outro ( para quem nao é cadastrado)
+1.1 - Nome - Descreva Outros:__________ Bruno Yoshio Mascarenhas Inoue
+8.0 - Valor cobrado (Ex: 00,00):_______ $1.100,00
+4.0 - Veículo:_________________________ OUTROS (Não tem o veiculo 
+cadastrado)
+4.1 - Veículo - Descreva Outros:_______ Fiorino
+5.0 - Nome Cliente:____________________ NANO FIBER
+5.1 - Nome Cliente - Descreva outros:__ Telefônica
+3.0 - Coleta/Entrega:__________________ Entrega
+6.0 - Origem:__________________________ Jacareí
+7.0 - Destino:_________________________ Bauru
+10.0 - Tipo de Chave Pix( CPF, CEL..):_ 44 785 704/000192
+10.1 - Chave Pix:______________________ CNPJ
+11.0 - Observações:____________________
+9.0 - Data combinada do pagamento:_____ Wed Feb 07 2024 00:00:00 
+GMT-0300 (Brasilia Standard Time)
+11.0 - Observações:____________________
+
+
+Planilha de Respostas TLLC 
+:https://docs.google.com/spreadsheets/d/1u9EgDn0s7WRXL89_JnHjfXi5dqP-zjZw9jJT28H5IRM/edit#gid=915181607
+
+Atenciosamente,
+Severino
+--------------ORSfGGeUMCE5LfPie0648KZf
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>Teste</p>
+    <p>teste<br>
+    </p>
+    <div class="moz-signature">
+      <meta charset="UTF-8">
+      <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+      <style>
+        /* Estilos CSS para a assinatura */
+        @media only screen and (max-width: 600px) {
+            .email-signature {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+            }
+            .email-signature img {
+                width: 70px !important;
+            }
+            .email-signature .social-icons {
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+            .email-signature .social-icons a {
+                display: inline-block !important;
+                margin-right: 5px !important;
+            }
+            .email-signature .banner {
+                text-align: center !important;
+                margin-top: 20px !important;
+            }
+        }
+    </style>
+      <p>Atenciosamente,</p>
+      <table class="email-signature" width="100%" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 1º Logotipo --> <a
+                href="https://www.torulog.com.br/" target="_blank"> <img
+src="https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator-brasil-v1-0-7%2F557%2F516557%2FLYRHHVhQ%2F936f5c81cf484b6caf1e9584e00a1665&amp;methods=resize%2C500%2C5000"
+                  alt="Logo da Empresa"
+                  style="display: block; border: 0;" width="70"> </a> </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 2º Nome e Cargo -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 14px; margin: 5px 0;">
+                <strong>Abel Ramos</strong> </p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;"> <em>Gerente
+                  de Planejamento</em> </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 3º Telefone e Endereço -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 5px 0;">Telefone:
+                ( 12)988073788</p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;">Endereço:
+                Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí -
+                SP, 12327-673</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 4º Ícones de Redes Sociais -->
+              <div class="social-icons"> <a
+                  href="https://www.instagram.com/torulog/"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-1.png"
+                    alt="Ícone do Facebook"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> <a
+href="https://api.whatsapp.com/send?phone=5512974099825&amp;text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/whatsapp-icone-2.png"
+                    alt="Ícone do LinkedIn"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="moz-forward-container"><br>
+      <br>
+      -------- Mensagem encaminhada --------
+      <table class="moz-email-headers-table" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">Assunto:
+            </th>
+            <td>TOR - Severino - Operacional - Pagamento - Terceiro</td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">Data: </th>
+            <td>Thu, 08 Feb 2024 16:34:51 +0000</td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">De: </th>
+            <td><a class="moz-txt-link-abbreviated" href="mailto:abelmramosss@gmail.com">abelmramosss@gmail.com</a></td>
+          </tr>
+          <tr>
+            <th valign="BASELINE" nowrap="nowrap" align="RIGHT">Para: </th>
+            <td><a class="moz-txt-link-abbreviated" href="mailto:planejamento@torulog.com.br">planejamento@torulog.com.br</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      Ola Prezados,<br>
+      <br>
+      Gentileza realizar lançamento no sistema Active.<br>
+      <br>
+      Obs: O número do ID é a referência de rastreio.<br>
+      <br>
+      ID:____________________________________ TLLC0000112<br>
+      2.0 - Data de Excução:_________________ Wed Feb 07 2024 00:00:00
+      GMT-0300 (Brasilia Standard Time)<br>
+      1.0 - Nome:____________________________ Outro ( para quem nao é
+      cadastrado)<br>
+      1.1 - Nome - Descreva Outros:__________ Bruno Yoshio Mascarenhas
+      Inoue<br>
+      8.0 - Valor cobrado (Ex: 00,00):_______ $1.100,00<br>
+      4.0 - Veículo:_________________________ OUTROS (Não tem o veiculo
+      cadastrado)<br>
+      4.1 - Veículo - Descreva Outros:_______ Fiorino<br>
+      5.0 - Nome Cliente:____________________ NANO FIBER<br>
+      5.1 - Nome Cliente - Descreva outros:__ Telefônica<br>
+      3.0 - Coleta/Entrega:__________________ Entrega<br>
+      6.0 - Origem:__________________________ Jacareí<br>
+      7.0 - Destino:_________________________ Bauru<br>
+      10.0 - Tipo de Chave Pix( CPF, CEL..):_ 44 785 704/000192<br>
+      10.1 - Chave Pix:______________________ CNPJ<br>
+      11.0 - Observações:____________________<br>
+      9.0 - Data combinada do pagamento:_____ Wed Feb 07 2024 00:00:00
+      GMT-0300 (Brasilia Standard Time)<br>
+      11.0 - Observações:____________________<br>
+      <br>
+      <br>
+      Planilha de Respostas TLLC
+:<a class="moz-txt-link-freetext" href="https://docs.google.com/spreadsheets/d/1u9EgDn0s7WRXL89_JnHjfXi5dqP-zjZw9jJT28H5IRM/edit#gid=915181607">https://docs.google.com/spreadsheets/d/1u9EgDn0s7WRXL89_JnHjfXi5dqP-zjZw9jJT28H5IRM/edit#gid=915181607</a><br>
+      <br>
+      Atenciosamente,<br>
+      Severino<br>
+    </div>
+  </body>
+</html>
+
+--------------ORSfGGeUMCE5LfPie0648KZf--

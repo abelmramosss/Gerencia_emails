@@ -1,0 +1,2497 @@
+Delivered-To: toruloglogistica@gmail.com
+Received: by 2002:a05:6a10:7015:b0:52a:eb75:205 with SMTP id g21csp485890pxa;
+        Tue, 23 Jan 2024 05:22:52 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHIig+DPsLEJ7K0ibrGrrzGgoiR+OiQTAkYoBtl1tgEUP647ehnEiyPexS2KnR78kbOkeoj
+X-Received: by 2002:a05:622a:1008:b0:42a:292b:20e6 with SMTP id d8-20020a05622a100800b0042a292b20e6mr955504qte.109.1706016171865;
+        Tue, 23 Jan 2024 05:22:51 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706016171; cv=none;
+        d=google.com; s=arc-20160816;
+        b=02kk36HE++tbhFTf1/1Esg8Xpj0unhtkjqpR0FMje+yqLdyOkFUNbjuvd9phkgI6a+
+         rnGpF3SgjI/MOPATD1Q28RwswrNMiP5Hkb58csY00j2m8MizAlo9nCKId/ZeiGIWXFH8
+         wkZcbfVmJA2JC8reKIgxhwigRT1X9Pdl30rW88uf6oUwPIO/DrGgLloawyMQ0wV1Mc3s
+         Bi88Wwp2VAf5ZyyuiPehAwGbTE6U0Xh7A7LQc7KVSsZgrJpaPQP2+0MrH/YS9DE954qV
+         5nZ0iw/VZYVD35tgqzHffF2QQLV8nKVWgmQSPlzU0jeWiEgJ+9vTNn7CqHlwCvzrlmMg
+         Vp/g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:from:content-language:references:cc:to:subject
+         :user-agent:mime-version:date:message-id;
+        bh=RhAZE8l4UVJGBk70tjptmZF8+zETzJTZGqOZaFoV9MQ=;
+        fh=nUk+lZHg0xzlAF7CVdxt1MM0TgPQ+X5unreYI7/OHD4=;
+        b=jA6qHhEjPfmatOIIIE8qDu5DV9bo2BXBVT4SF4W1HIyUjmYOK5+QCDSGTlaYyAczIl
+         iGcI7Fh9ptPnC1QplrEZQ/7f5dAYCkYmLd801iA4Z2Cb1o3NHXq7xgnqUA0siv8vW/9s
+         jIianw4j6IpvIHTiqjnuX/WJJuJXxeCGigusfzWpvMNC1Sw+OaXYijDCVmPlY/TKi/rb
+         NqCJfpcpY/NdKR/AhWFIDCC37iTdIYI0gqW7kv3k9nlJBbBFAZdoT43CupOQysq1+tHJ
+         xO7s+rUFelpVdL2F0EjU8quJBNV0KV3ie1FB2kwcrb96E/fyElDehFzWUJXHuHZYapr8
+         bIMg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of fabricio.correia@torulog.com.br designates 44.202.169.37 as permitted sender) smtp.mailfrom=fabricio.correia@torulog.com.br
+Return-Path: <fabricio.correia@torulog.com.br>
+Received: from omta038.useast.a.cloudfilter.net (omta038.useast.a.cloudfilter.net. [44.202.169.37])
+        by mx.google.com with ESMTPS id c17-20020a05622a025100b0042a4146e038si4081187qtx.330.2024.01.23.05.22.51
+        for <toruloglogistica@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 23 Jan 2024 05:22:51 -0800 (PST)
+Received-SPF: pass (google.com: domain of fabricio.correia@torulog.com.br designates 44.202.169.37 as permitted sender) client-ip=44.202.169.37;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of fabricio.correia@torulog.com.br designates 44.202.169.37 as permitted sender) smtp.mailfrom=fabricio.correia@torulog.com.br
+Received: from eig-obgw-5002a.ext.cloudfilter.net ([10.0.29.215])
+	by cmsmtp with ESMTPS
+	id SGPjror9d9gG6SGjrrHG5f; Tue, 23 Jan 2024 13:22:51 +0000
+Received: from sh-pro16.hostgator.com.br ([162.241.60.112])
+	by cmsmtp with ESMTPS
+	id SGgvrcIBcBnVCSGgvrEaRK; Tue, 23 Jan 2024 13:19:50 +0000
+X-Authority-Analysis: v=2.4 cv=H+TIfsUi c=1 sm=1 tr=0 ts=65afbcf6
+ a=3doCq9P6mh9rLCyYmCcnvQ==:117 a=3doCq9P6mh9rLCyYmCcnvQ==:17
+ a=dEuoMetlWLkA:10 a=BKpAeEf8ozMA:10 a=r77TgQKjGQsHNAKrUKIA:9 a=1cRiD_rjAAAA:8
+ a=BkpHzsgbAAAA:8 a=6F8FqG5_AAAA:20 a=69ZdsSwoAAAA:8 a=Nf6amQteAAAA:8
+ a=OEeAdt_fAAAA:8 a=Jci-L8VkAAAA:8 a=8AUYT-FRAAAA:8 a=uherdBYGAAAA:8
+ a=lmNeKpDuu5QrMTCyKE0A:9 a=QEXdDO2ut3YA:10 a=JT48V3L8DVoA:10 a=_vPlxUM9AAAA:8
+ a=3g80flMcAAAA:8 a=GT1FQX9uAAAA:8 a=QB3A2YJMAAAA:20 a=z1z57mSA7t_tfgB1JU0A:9
+ a=BhMdqm2Wqc4Q2JL7t0yJfBCtM/Y=:19 a=lo-IhcRJh3yQ4FFQ:21 a=UiCQ7L4-1S4A:10
+ a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10 a=ouV8bqFNGZoA:10
+ a=ISEVhJcMthgDf_L2nGMA:9 a=HXjIzolwW10A:10 a=T6a71-JsGAwA:10
+ a=48tPHiCUICsy1UhOnLQA:9 a=1Vq_FK4TplAA:10 a=7FNYEHr8PWIA:10
+ a=z6Pj7PA89W7CS5wXn6-b:22 a=NWVoK91CQySWRX1oVYDe:22 a=lAIPu-TSoPCgWs-2gwLQ:22
+ a=blX6IingZl8_hwIj0iom:22 a=dVdYPC88Qxz3DSaiHwW6:22 a=JG_qV7-m-4toEnw9QFsM:22
+ a=n0b5RDiZG_xpONRD2Xkx:22 a=gW3LL7ks74uTpPDjWjxZ:22 a=ol4Mctu3ScgIgjXaTndp:22
+ a=Ef4yma5cpRUEJWN9UqBm:22 a=3OzwZZK9wuBjIL5KE02K:22 a=v-qSr-_IHA66GWFCoi7P:22
+ a=bA3UWDv6hWIuX7UZL3qL:22
+Received: from [187.95.26.241] (port=2597 helo=[192.168.18.27])
+	by sh-pro16.hostgator.com.br with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <fabricio.correia@torulog.com.br>)
+	id 1rSGgu-000wku-32;
+	Tue, 23 Jan 2024 10:19:49 -0300
+Content-Type: multipart/alternative;
+ boundary="------------oawshXWfl60Smuv6cczj9gzE"
+Message-ID: <d17d5cb2-a793-4a69-b626-cbf02d61ba11@torulog.com.br>
+Date: Tue, 23 Jan 2024 10:19:46 -0300
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Re: RES: Pedido de Compra - 01012
+To: Vendas <vendas@quimlab.com.br>, 'Ludmila DINIZ' <ludmila.diniz@winoa.com>
+Cc: 'Lilian' <lilian.sene@torulog.com.br>,
+ 'TORULOG LOGISTICA LTDA' <planejamento@torulog.com.br>
+References: <PAZSPR01MB00125B0ABBD57DCF27F69C31E1702@PAZSPR01MB0012.FRAP264.PROD.OUTLOOK.COM>
+ <012701da4afa$c2c17a30$48446e90$@com.br>
+ <PAZSPR01MB0012704AB1E07F462FA5721BE1702@PAZSPR01MB0012.FRAP264.PROD.OUTLOOK.COM>
+ <014301da4afd$8346fda0$89d4f8e0$@com.br>
+ <PR1P264MB40561626555ABF80C077BF04E1752@PR1P264MB4056.FRAP264.PROD.OUTLOOK.COM>
+ <015d01da4d4e$8bbe3fe0$a33abfa0$@com.br>
+ <PR1P264MB4056A6AF30FEFDE6C72A6DC5E1752@PR1P264MB4056.FRAP264.PROD.OUTLOOK.COM>
+ <001901da4deb$845865d0$8d093170$@com.br>
+ <PR1P264MB40563779E41414257A61F57CE1742@PR1P264MB4056.FRAP264.PROD.OUTLOOK.COM>
+ <007b01da4df7$255a80c0$700f8240$@com.br>
+Content-Language: pt-BR
+From: Fabricio Correia <fabricio.correia@torulog.com.br>
+In-Reply-To: <007b01da4df7$255a80c0$700f8240$@com.br>
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - sh-pro16.hostgator.com.br
+X-AntiAbuse: Original Domain - torulog.com.br
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - torulog.com.br
+X-BWhitelist: no
+X-Source-IP: 187.95.26.241
+X-Source-L: No
+X-Exim-ID: 1rSGgu-000wku-32
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: ([192.168.18.27]) [187.95.26.241]:2597
+X-Source-Auth: fabricio.correia@torulog.com.br
+X-Email-Count: 4
+X-Org: HG=hgshared_brpro;ORG=latam;
+X-Source-Cap: cG90ZW4zNjU7cG90ZW4zNjU7c2gtcHJvMTYuaG9zdGdhdG9yLmNvbS5icg==
+X-Local-Domain: yes
+X-CMAE-Envelope: MS4xfJgG42FSvwXRWR2zsi6r0zMUi0Lc2J/WRRdKHydZq1BhOiNzDfqztoqg91Qio8R+S2XcLQxPqRoROH/zygE7f+HhE+L8SbftyvHIr0pXmJQz8pn5ETJN
+ aoc4ez7a4W1sDnUf/G+fLMWpkZWCkjgIUsVpKuXMmfztrOJ0wMVttnXthu2XB+ZdnpM8m3zBEpQVO2zTuFEbKukVN/beE7a5nDdOlC8TfC7FxlxF2RgERO26
+
+This is a multi-part message in MIME format.
+--------------oawshXWfl60Smuv6cczj9gzE
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Ludmila,
+
+Não somos habilitados para transportes químicos.
+
+Sasmaq
+
+O Sistema de avaliação de saúde, segurança, meio ambiente e qualidade é 
+um método de avaliação criado e exigido pela Associação Brasileira de 
+Indústrias Químicas, e implementado pelos elementos que compõem uma 
+determinada cadeia logística.
+
+
+Logo da Empresa <https://www.torulog.com.br/>
+
+*Fabrício Correia*
+
+/Gerente Operacional/
+
+Telefone: ( 12)974020693
+
+Endereço: Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí - SP, 
+12327-673
+
+Ícone do Instagram <https://www.instagram.com/torulog/> Ícone do 
+WhatsApp 
+<https://api.whatsapp.com/send?phone=5512974099825&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!> 
+
+Banner em Destaque <http://expo.isavale.org.br/home/>
+
+Em 23/01/2024 09:24, Vendas escreveu:
+>
+> Não é necessário Sassmaq, porém a transportadora precisa ser 
+> habilitada para transporte de produtos perigosos.
+>
+> Att,
+>
+> Aline
+>
+> *De:*Ludmila DINIZ [mailto:ludmila.diniz@winoa.com]
+> *Enviada em:* terça-feira, 23 de janeiro de 2024 08:35
+> *Para:* Vendas; 'Fabricio'
+> *Cc:* Lilian; 'TORULOG LOGISTICA LTDA'
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Bom dia Aline,
+>
+> É preciso de Sassmaq para coletar os produtos?
+>
+>
+>
+> 	<https://www.winoagroup.com/en>
+>
+>
+> Ludmila Diniz
+>
+> Intern
+> Winoa do Brasil
+>
+> Av.Industrial, 500 – Jacareí -SP
+>
+> Tel. +55 (12) 3954-4279
+> _ludmila.diniz@_winoa.com <https://www.winoagroup.com/>
+>
+> /Please consider the environment before printing this email./
+>
+> *De:*Vendas <vendas@quimlab.com.br>
+> *Enviada em:* terça-feira, 23 de janeiro de 2024 08:01
+> *Para:* Ludmila DINIZ <ludmila.diniz@winoa.com>; 'Fabricio' 
+> <fabricio.correia@torulog.com.br>
+> *Cc:* 'Lilian' <lilian.sene@torulog.com.br>; 'TORULOG LOGISTICA LTDA' 
+> <planejamento@torulog.com.br>
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Bom dia! Agradeço pelo breve retorno. Em anexo envio as FISPQ para a 
+> confirmação da transportadora que coleta esse tipo de produto. Aguardo 
+> urgente o retorno. Atenção! Quando o produto ficar disponível para 
+> coleta, entraremos em contato. Qualquer
+>
+> Bom dia!
+>
+> Agradeço pelo breve retorno.
+>
+> Em anexo envio as FISPQ para a confirmação da transportadora que 
+> coleta esse tipo de produto.
+>
+> Aguardo urgente o retorno.
+>
+> *Atenção!*Quando o produto ficar disponível para coleta, entraremos em 
+> contato.
+>
+> Qualquer dúvida, estou à disposição.
+>
+> *A Nivia está de férias.
+>
+> Atenciosamente .?
+>
+> *Aline Ribeiro*
+>
+> Depto Comercial - Telefone: (12) *3955-4642*
+>
+> Quimlab Produtos de Quimica Fina Ltda
+>
+> Visite Nosso Site : http://quimlab.com.br/ 
+> <https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!LLhZB3jB5mhibcrCouJD5RK_kU3J8cPfb3oy6a0-hTnLBa_WdsLm4j6rwvdCnUoH0xcFSExbo_np-ZZ9TaW0Rg$>
+>
+> Empresas do grupo *QUIMLAB*:
+>
+> - Laboratórios Químicos e Metrológicos Quimlab Ltda (02.236.210/0001-09)
+>
+> - Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)
+>
+> - Instituto Granado de Química e Polímeros Sociedade Unipessoal Ltda 
+> (26.269.070/0001-33)
+>
+> - Quimlab Produtos Científicos Ltda (12.850.204/0001-09) -Produtos 
+> importados
+>
+> *De:*Ludmila DINIZ [mailto:ludmila.diniz@winoa.com 
+> <mailto:ludmila.diniz@winoa.com>]
+> *Enviada em:* segunda-feira, 22 de janeiro de 2024 13:31
+> *Para:* Vendas; 'Fabricio'
+> *Cc:* 'Lilian'; 'TORULOG LOGISTICA LTDA'
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Boa tarde,
+>
+> A transportadora responsável vai ser a TORULOG.
+>
+>
+>
+> 	<https://www.winoagroup.com/en>
+>
+>
+> Ludmila Diniz
+>
+> Intern
+> Winoa do Brasil
+>
+> Av.Industrial, 500 – Jacareí -SP
+>
+> Tel. +55 (12) 3954-4279
+> _ludmila.diniz@_winoa.com <https://www.winoagroup.com/>
+>
+> /Please consider the environment before printing this email./
+>
+> *De:*Vendas <vendas@quimlab.com.br>
+> *Enviada em:* segunda-feira, 22 de janeiro de 2024 13:18
+> *Para:* Ludmila DINIZ <ludmila.diniz@winoa.com>; 'Fabricio' 
+> <fabricio.correia@torulog.com.br>
+> *Cc:* 'Lilian' <lilian.sene@torulog.com.br>; 'TORULOG LOGISTICA LTDA' 
+> <planejamento@torulog.com.br>; Geysa SANTOS <geysa.santos@winoa.com>
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Boa tarde! Material não está disponível para coleta, no momento é 
+> necessário somente a definição da transportadora para inserir ao 
+> pedido. Quando ficar pronto entraremos em contato com a mesma. 
+> Qualquer dúvida, estou à disposição. *A Nivia
+>
+> Boa tarde!
+>
+> Material não está disponível para coleta, no momento é necessário 
+> somente a definição da transportadora para inserir ao pedido.
+>
+> Quando ficar pronto entraremos em contato com a mesma.
+>
+> Qualquer dúvida, estou à disposição.
+>
+> *A Nivia está de férias.
+>
+> Atenciosamente .?
+>
+> *Aline Ribeiro*
+>
+> Depto Comercial - Telefone: (12) *3955-4642*
+>
+> Quimlab Produtos de Quimica Fina Ltda
+>
+> Visite Nosso Site : http://quimlab.com.br/ 
+> <https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!NJVD7L2i486OHEPxAB6UhMKllem4BmoM3dKmdGvW3w0bnHTxKo5CoOAERKPNAnUmhj3O6O__MTT9l53-6y7Crw$>
+>
+> Empresas do grupo *QUIMLAB*:
+>
+> - Laboratórios Químicos e Metrológicos Quimlab Ltda (02.236.210/0001-09)
+>
+> - Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)
+>
+> - Instituto Granado de Química e Polímeros Sociedade Unipessoal Ltda 
+> (26.269.070/0001-33)
+>
+> - Quimlab Produtos Científicos Ltda (12.850.204/0001-09) -Produtos 
+> importados
+>
+> *De:*Ludmila DINIZ [mailto:ludmila.diniz@winoa.com 
+> <mailto:ludmila.diniz@winoa.com>]
+> *Enviada em:* segunda-feira, 22 de janeiro de 2024 08:11
+> *Para:* Vendas; Fabricio
+> *Cc:* Lilian; 'TORULOG LOGISTICA LTDA'; Geysa SANTOS
+> *Assunto:* ENC: Pedido de Compra - 01012
+>
+> Bom dia Fabricio!
+>
+> Como vai?
+>
+> Pode agendar coleta, por gentileza.
+>
+> *_Quimlab Produtos de Química Fina Ltda _*
+>
+>
+> Rod. Geraldo Scavone, 2300 - Jd. Califórnia - CEP: 12305-490, Galpão 10.
+> *Jacareí/SP*
+>
+> - Valor da NF: R$ 358,51 + valor do frete
+>
+> - MEDIDAS: +/- 1 volume(28cm x 31,5cm x 41,5cm)
+>
+> - PESO: +/- 7 kg
+>
+> Produto Químico Classificado.
+>
+> Obrigada,
+>
+>
+>
+> 	<https://www.winoagroup.com/en>
+>
+>
+> Ludmila Diniz
+>
+> Intern
+> Winoa do Brasil
+>
+> Av.Industrial, 500 – Jacareí -SP
+>
+> Tel. +55 (12) 3954-4279
+> _ludmila.diniz@_winoa.com <https://www.winoagroup.com/>
+>
+> /Please consider the environment before printing this email./
+>
+> *De:*Vendas <vendas@quimlab.com.br>
+> *Enviada em:* sexta-feira, 19 de janeiro de 2024 14:33
+> *Para:* Ludmila DINIZ <ludmila.diniz@winoa.com>
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Boa tarde Ludmila, A definição da transportadora precisa ser antes da 
+> emissão da NF. Segue dados da caixa: CNPJ faturamento: IGTPAN CNPJ: 
+> 26. 269. 070/0001-33 LOCAL DA COLETA: Quimlab Produtos de Química Fina 
+> Ltda Rod. Geraldo Scavone, 2300 -
+>
+> Boa tarde Ludmila,
+>
+> A definição da transportadora precisa ser antes da emissão da NF.
+>
+> Segue dados da caixa:
+>
+> CNPJ faturamento: *IGTPAN CNPJ:* *26.269.070/0001-33*
+>
+> *LOCAL DA COLETA: *
+>
+> *_Quimlab Produtos de Química Fina Ltda _*
+>
+>
+> Rod. Geraldo Scavone, 2300 - Jd. Califórnia - CEP: 12305-490, Galpão 10.
+> *Jacareí/SP*
+>
+> - Valor da NF: R$ 358,51 + valor do frete
+>
+> - MEDIDAS: +/- 1 volume(28cm x 31,5cm x 41,5cm)
+>
+> - PESO: +/- 7 kg
+>
+> Produto Químico Classificado.
+>
+> Qualquer dúvida, estou à disposição.
+>
+> Atenciosamente .?
+>
+> **
+>
+> *Nivia Rodrigues*
+>
+> Depto Comercial - Telefone: (12) *3955-4642*
+>
+> Quimlab Produtos de Quimica Fina Ltda
+>
+> Visite Nosso Site : http://quimlab.com.br/ 
+> <https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!JapCe2FXTFoF57e60tQA2NkdNScem2vuRb0QbEDSakTc-NQxsa2UuEcxp9RNVetWL75omDIBt7v4CwK7GphbhQ$>
+>
+> Empresas do grupo *QUIMLAB*:
+>
+> - Laboratórios Químicos e Metrológicos Quimlab Ltda (02.236.210/0001-09)
+>
+> - Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)
+>
+> - Instituto Granado de Química e Polímeros Sociedade Unipessoal Ltda 
+> (26.269.070/0001-33)
+>
+> - Quimlab Produtos Científicos Ltda (12.850.204/0001-09) -Produtos 
+> importados
+>
+> *De:*Ludmila DINIZ [mailto:ludmila.diniz@winoa.com 
+> <mailto:ludmila.diniz@winoa.com>]
+> *Enviada em:* sexta-feira, 19 de janeiro de 2024 14:17
+> *Para:* Vendas
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Boa tarde,
+>
+> Assim que o pedido estiver pronto, por favor me envie as dimensões do 
+> material e o endereço para que eu possa agendar a coleta.
+>
+> Obrigada,
+>
+>
+>
+> 	<https://www.winoagroup.com/en>
+>
+>
+> Ludmila Diniz
+>
+> Intern
+> Winoa do Brasil
+>
+> Av.Industrial, 500 – Jacareí -SP
+>
+> Tel. +55 (12) 3954-4279
+> _ludmila.diniz@_winoa.com <https://www.winoagroup.com/>
+>
+> /Please consider the environment before printing this email./
+>
+> *De:*Vendas <vendas@quimlab.com.br>
+> *Enviada em:* sexta-feira, 19 de janeiro de 2024 14:13
+> *Para:* Ludmila DINIZ <ludmila.diniz@winoa.com>
+> *Cc:* Geysa SANTOS <geysa.santos@winoa.com>; Solange CAVALCANTI 
+> <solange.cavalcanti@winoa.com>; Sthefani PRADO <sthefani.prado@winoa.com>
+> *Assunto:* RES: Pedido de Compra - 01012
+>
+> Boa tarde Ludmila ok, favor considerar frete FOB no seu pedido. Muito 
+> obrigado(a) pela confiança e preferência. Já estou enviando o seu 
+> material para a produção. Segue em anexo espelho do pedido. A respeito 
+> do seu pedido: Nº Interno do PedidoEndereço
+>
+> Boa tarde Ludmila ok, favor considerar frete *FOB* no seu pedido.
+>
+> Muito obrigado(a) pela confiança e preferência.
+>
+> Já estou enviando o seu material para a produção.
+>
+> Segue em anexo espelho do pedido.
+>
+> A respeito do seu pedido:
+>
+> *Nº Interno do Pedido*
+>
+> 	
+>
+> *Endereço de entrega*
+>
+> 	
+>
+> *Forma de Envio*
+>
+> 	
+>
+> *Previsão de envio*
+>
+> 	
+>
+> *Forma de Pagamento*
+>
+> 83652
+>
+> 	
+>
+> Av Industrial 500, Jardim Emilia, Cep: 12321-500, Jacareí/SP
+>
+> 	
+>
+> A definir pelo cliente
+>
+> 	
+>
+> 8 à 12 dias úteis
+>
+> 	
+>
+> Transferência Bancária para 45 DDL
+>
+> (Data fixa nos dias 6 e 21)
+>
+> Qualquer dúvida, estou à disposição.
+>
+> Atenciosamente .?
+>
+> **
+>
+> Nivia Rodrigues**
+>
+> Depto Comercial - Telefone: (12) *3955-4642*
+>
+> Quimlab Produtos de Quimica Fina Ltda
+>
+> Visite Nosso Site : http://quimlab.com.br/ 
+> <https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!MDnO_LPLev5W01psgzMHNSY239pNE49bxDSR21GtM9trB5C5Lvgs2swHFhJHRS8jB8YVVm2VNBOXKUg80G_RjQ$>
+>
+> Empresas do grupo *QUIMLAB*:
+>
+> - Laboratórios Químicos e Metrológicos Quimlab Ltda (02.236.210/0001-09)
+>
+> - Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)
+>
+> - Instituto Granado de Química e Polímeros Sociedade Unipessoal Ltda 
+> (26.269.070/0001-33)
+>
+> - Quimlab Produtos Científicos Ltda (12.850.204/0001-09) -Produtos 
+> importados
+>
+> *De:*Ludmila DINIZ [mailto:ludmila.diniz@winoa.com 
+> <mailto:ludmila.diniz@winoa.com>]
+> *Enviada em:* sexta-feira, 19 de janeiro de 2024 13:38
+> *Para:* Vendas
+> *Cc:* Geysa SANTOS; Solange CAVALCANTI; Sthefani PRADO
+> *Assunto:* Pedido de Compra - 01012
+>
+> Bom dia,
+>
+>
+> Segue pedido *01012. *Proceder conforme negociação e entrega o quanto 
+> antes.*__*
+>
+> Os *_recebimentos ocorrerão nos períodos mencionados abaixo:_*
+>
+> -   JANEIRO: entre os dias 04 e 29
+>
+> --
+>
+> *_INSTRUÇÕES GERAIS PARA O ACEITE DO PEDIDO_*
+>
+>   * Solicitamos confirmar o recebimento deste pedido, assim como ler
+>     atentamente as condições presentes no pedido de compra;
+>   * Gostaria de ressaltar que nossas datas fixas para *_pagamento
+>     são_*_*6 e 21, via transferência bancária;*_
+>   * Não faturar acima do volume e valor solicitado sem prévia
+>     aprovação, sujeito à recusa no recebimento;
+>   * _Inserir na nota o número do pedido_para nos auxiliar no controle
+>     de recebimento;
+>   * *Todas as NFs devem ser enviadas
+>     para:*nfe.fornecedor@winoagroup.com – o envio para outros
+>     endereços eletrônicos pode acarretar atraso nos pagamentos.
+>   * *Horário de recebimento*– *manhã: 08 às 12h | tarde: 13:30h às 16h*
+>   * O motorista que fará a entrega deverá *_obrigatoriamente_* usar os
+>     EPI’s:
+>           + Capacete;
+>           + Óculos de proteção;
+>           + Protetor auricular;
+>           + Colete de sinalização;
+>           + Sapato de segurança;
+>           + Luva de vaqueta ou pigmentada;
+>
+> Obrigada,
+>
+>
+>
+> 	<https://www.winoagroup.com/en>
+>
+>
+> Ludmila Diniz
+>
+> Intern
+> Winoa do Brasil
+>
+> Av.Industrial, 500 – Jacareí -SP
+>
+> Tel. +55 (12) 3954-4279
+> _ludmila.diniz@_winoa.com <https://www.winoagroup.com/>
+>
+> /Please consider the environment before printing this email./
+>
+--------------oawshXWfl60Smuv6cczj9gzE
+Content-Type: multipart/related;
+ boundary="------------baedTs7OjiGGHfpQvBpaXQ71"
+
+--------------baedTs7OjiGGHfpQvBpaXQ71
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p><span
+style="color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Ludmila,
+        <br>
+      </span></p>
+    <p><span
+style="color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Não
+        somos habilitados para transportes químicos.<br>
+      </span></p>
+    <p><span
+style="color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Sasmaq<br>
+      </span></p>
+    <p><span
+style="color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">O
+        Sistema de avaliação de saúde, segurança, meio ambiente e
+        qualidade é um método de avaliação criado e exigido pela
+        Associação Brasileira de Indústrias Químicas, e implementado
+        pelos elementos que compõem uma determinada cadeia logística.</span></p>
+    <p><span
+style="color: rgb(77, 81, 86); font-family: arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"><br>
+      </span></p>
+    <div class="moz-signature">
+      <meta charset="UTF-8">
+      <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+      <style>
+        /* Estilos CSS para a assinatura */
+        @media only screen and (max-width: 600px) {
+            .email-signature {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+            }
+            .email-signature img {
+                width: 70px !important;
+            }
+            .email-signature .social-icons {
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+            .email-signature .social-icons a {
+                display: inline-block !important;
+                margin-right: 5px !important;
+            }
+            .email-signature .banner {
+                text-align: center !important;
+                margin-top: 20px !important;
+            }
+        }
+    </style>
+      <table class="email-signature" width="100%" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 1º Logotipo --> <a
+                href="https://www.torulog.com.br/" target="_blank"> <img
+src="https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator-brasil-v1-0-7%2F557%2F516557%2FLYRHHVhQ%2F936f5c81cf484b6caf1e9584e00a1665&amp;methods=resize%2C500%2C5000"
+                  alt="Logo da Empresa"
+                  style="display: block; border: 0;" width="70"> </a> </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 2º Nome e Cargo -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 14px; margin: 5px 0;">
+                <strong>Fabrício Correia</strong> </p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;"> <em>Gerente
+                  Operacional</em> </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 3º Telefone e Endereço -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 5px 0;">Telefone:
+                ( 12)974020693</p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;">Endereço:
+                Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí -
+                SP, 12327-673</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 4º Ícones de Redes Sociais -->
+              <div class="social-icons"> <a
+                  href="https://www.instagram.com/torulog/"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-1.png"
+                    alt="Ícone do Instagram"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> <a
+href="https://api.whatsapp.com/send?phone=5512974099825&amp;text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/whatsapp-icone-2.png"
+                    alt="Ícone do WhatsApp"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 5º Banner em Destaque -->
+              <div class="banner"> <a
+                  href="http://expo.isavale.org.br/home/"
+                  target="_blank"> <img
+                    src="https://i.imgur.com/dT8wcVE.png"
+                    alt="Banner em Destaque"
+                    style="display: block; border: 0;" width="70%"> </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="moz-cite-prefix">Em 23/01/2024 09:24, Vendas escreveu:<br>
+    </div>
+    <blockquote type="cite"
+      cite="mid:007b01da4df7$255a80c0$700f8240$@com.br">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="Generator"
+        content="Microsoft Word 12 (filtered medium)">
+      <!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]-->
+      <style>@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}@font-face
+	{font-family:Roboto;}@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}span.EstiloDeEmail17
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}span.EstiloDeEmail18
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}div.WordSection1
+	{page:WordSection1;}ol
+	{margin-bottom:0cm;}ul
+	{margin-bottom:0cm;}</style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext="edit" spidmax="1031" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext="edit">
+<o:idmap v:ext="edit" data="1" />
+</o:shapelayout></xml><![endif]-->
+      <div class="WordSection1">
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Não
+            é necessário Sassmaq, porém a transportadora precisa ser
+            habilitada para transporte de produtos perigosos.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Att,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Aline<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <div>
+          <div
+style="border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+            <p class="MsoNormal"><b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">De:</span></b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ludmila
+                DINIZ [<a class="moz-txt-link-freetext" href="mailto:ludmila.diniz@winoa.com">mailto:ludmila.diniz@winoa.com</a>] <br>
+                <b>Enviada em:</b> terça-feira, 23 de janeiro de 2024
+                08:35<br>
+                <b>Para:</b> Vendas; 'Fabricio'<br>
+                <b>Cc:</b> Lilian; 'TORULOG LOGISTICA LTDA'<br>
+                <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+          </div>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Bom dia
+            Aline,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">É preciso de
+            Sassmaq para coletar os produtos?<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+<v:stroke joinstyle="miter" />
+<v:formulas>
+<v:f eqn="if lineDrawn pixelLineWidth 0" />
+<v:f eqn="sum @0 1 0" />
+<v:f eqn="sum 0 0 @1" />
+<v:f eqn="prod @2 1 2" />
+<v:f eqn="prod @3 21600 pixelWidth" />
+<v:f eqn="prod @3 21600 pixelHeight" />
+<v:f eqn="sum @0 0 1" />
+<v:f eqn="prod @6 1 2" />
+<v:f eqn="prod @7 21600 pixelWidth" />
+<v:f eqn="sum @8 21600 0" />
+<v:f eqn="prod @7 21600 pixelHeight" />
+<v:f eqn="sum @10 21600 0" />
+</v:formulas>
+<v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect" />
+<o:lock v:ext="edit" aspectratio="t" />
+</v:shapetype><v:shape id="_x0000_s1030" type="#_x0000_t75" href="https://www.winoagroup.com/en" style='position:absolute;margin-left:0;margin-top:14.05pt;width:399.75pt;height:123pt;z-index:251667456;visibility:visible;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:left;mso-position-horizontal-relative:margin;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:margin' o:button="t">
+<v:fill o:detectmouseclick="t" />
+<v:imagedata src="imap://fabricio%2Ecorreia%40torulog%2Ecom%2Ebr@mail.torulog.com.br:993/fetch%3EUID%3E.INBOX%3E29386?header=quotebody&part=1.2&filename=image001.png" o:title="" />
+<o:lock v:ext="edit" aspectratio="f" />
+<w:wrap anchorx="margin"/>
+</v:shape><![endif]--><!--[if !vml]--><span style="mso-ignore:vglayout">
+            <table cellspacing="0" cellpadding="0" align="left">
+              <tbody>
+                <tr>
+                  <td width="0" height="19"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><a href="https://www.winoagroup.com/en"
+                      moz-do-not-send="true"><img
+                        src="cid:part1.LXxPU2OX.7kEAIBSQ@torulog.com.br"
+                        v:shapes="_x0000_s1030" class="" width="533"
+                        height="164" border="0"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </span><!--[endif]--><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669"><o:p> </o:p></span></p>
+        <br style="mso-ignore:vglayout" clear="ALL">
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669">Ludmila
+            Diniz<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt;font-family:Roboto;color:#596669">Intern<br>
+            Winoa do Brasil<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Av.Industrial,
+            500 – Jacareí -SP<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Tel.
+            +55 (12) 3954-4279<br>
+            <u>ludmila.diniz@</u></span><span style="font-size:11.0pt"><a
+              href="https://www.winoagroup.com/" target="_blank"
+              moz-do-not-send="true"><span
+                style="font-size:9.0pt;font-family:Roboto;color:#596669">winoa.com</span></a></span><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt"><img id="Imagem_x0020_12"
+              src="cid:part2.VOBceyqJ.Po1GRxRo@torulog.com.br" class=""
+              width="272" height="32" border="0"></span><span
+            style="font-size:11.0pt" lang="EN-US"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <p class="MsoNormal"
+style="margin-bottom:7.5pt;text-align:justify;background:white"><i><span
+              style="font-size:7.5pt;font-family:Roboto;color:#5A6669"
+              lang="EN-US">Please consider the environment before
+              printing this email.<o:p></o:p></span></i></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <div
+style="border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+          <p class="MsoNormal"><b><span style="font-size:11.0pt">De:</span></b><span
+              style="font-size:11.0pt"> Vendas
+              <a class="moz-txt-link-rfc2396E" href="mailto:vendas@quimlab.com.br">&lt;vendas@quimlab.com.br&gt;</a> <br>
+              <b>Enviada em:</b> terça-feira, 23 de janeiro de 2024
+              08:01<br>
+              <b>Para:</b> Ludmila DINIZ
+              <a class="moz-txt-link-rfc2396E" href="mailto:ludmila.diniz@winoa.com">&lt;ludmila.diniz@winoa.com&gt;</a>; 'Fabricio'
+              <a class="moz-txt-link-rfc2396E" href="mailto:fabricio.correia@torulog.com.br">&lt;fabricio.correia@torulog.com.br&gt;</a><br>
+              <b>Cc:</b> 'Lilian' <a class="moz-txt-link-rfc2396E" href="mailto:lilian.sene@torulog.com.br">&lt;lilian.sene@torulog.com.br&gt;</a>;
+              'TORULOG LOGISTICA LTDA'
+              <a class="moz-txt-link-rfc2396E" href="mailto:planejamento@torulog.com.br">&lt;planejamento@torulog.com.br&gt;</a><br>
+              <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white">Bom dia! Agradeço pelo
+              breve retorno. Em anexo envio as FISPQ para a confirmação
+              da transportadora que coleta esse tipo de produto. Aguardo
+              urgente o retorno. Atenção! Quando o produto ficar
+              disponível para coleta, entraremos em contato. Qualquer <o:p></o:p></span></p>
+        </div>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white"><o:p> </o:p></span></p>
+        </div>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Bom
+            dia!<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Agradeço
+            pelo breve retorno.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Em
+            anexo envio as FISPQ para a confirmação da transportadora
+            que coleta esse tipo de produto.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Aguardo
+            urgente o retorno.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><b><span
+              style="font-size:11.0pt;color:black">Atenção!</span></b><span
+            style="font-size:11.0pt;color:black"> Quando o produto ficar
+            disponível para coleta, entraremos em contato.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Qualquer
+            dúvida, estou à disposição.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">*A
+            Nivia está de férias.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Atenciosamente
+          </span><span
+style="font-family:&quot;Comic Sans MS&quot;;color:black;background:white">.</span><span
+style="font-size:30.0pt;font-family:Wingdings;color:black;background:white">?</span><span
+            style="font-size:11.0pt;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><b><span
+              style="font-size:11.0pt;color:black">Aline Ribeiro<o:p></o:p></span></b></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Depto
+            Comercial - Telefone: (12) <b>3955-4642</b><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Quimlab
+            Produtos de Quimica Fina Ltda<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Visite
+            Nosso Site : <a
+href="https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!LLhZB3jB5mhibcrCouJD5RK_kU3J8cPfb3oy6a0-hTnLBa_WdsLm4j6rwvdCnUoH0xcFSExbo_np-ZZ9TaW0Rg$"
+              moz-do-not-send="true"><span style="color:black">http://quimlab.com.br/</span></a><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Empresas
+            do grupo <b>QUIMLAB</b>:<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Laboratórios Químicos e Metrológicos Quimlab Ltda
+            (02.236.210/0001-09)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Instituto Granado de Química e Polímeros Sociedade
+            Unipessoal Ltda (26.269.070/0001-33)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Quimlab Produtos Científicos Ltda (12.850.204/0001-09)
+            -Produtos importados<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <div>
+          <div
+style="border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+            <p class="MsoNormal"><b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">De:</span></b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ludmila
+                DINIZ [<a href="mailto:ludmila.diniz@winoa.com"
+                  moz-do-not-send="true">mailto:ludmila.diniz@winoa.com</a>]
+                <br>
+                <b>Enviada em:</b> segunda-feira, 22 de janeiro de 2024
+                13:31<br>
+                <b>Para:</b> Vendas; 'Fabricio'<br>
+                <b>Cc:</b> 'Lilian'; 'TORULOG LOGISTICA LTDA'<br>
+                <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+          </div>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Boa tarde,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">A
+            transportadora responsável vai ser a TORULOG.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape id="Imagem_x0020_5" o:spid="_x0000_s1029" type="#_x0000_t75" href="https://www.winoagroup.com/en" style='position:absolute;margin-left:0;margin-top:14.05pt;width:399.75pt;height:123pt;z-index:251665408;visibility:visible;mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:left;mso-position-horizontal-relative:margin;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:margin' o:button="t">
+<v:fill o:detectmouseclick="t" />
+<v:imagedata src="imap://fabricio%2Ecorreia%40torulog%2Ecom%2Ebr@mail.torulog.com.br:993/fetch%3EUID%3E.INBOX%3E29386?header=quotebody&part=1.2&filename=image001.png" o:title="" />
+<o:lock v:ext="edit" aspectratio="f" />
+<w:wrap anchorx="margin"/>
+</v:shape><![endif]--><!--[if !vml]--><span style="mso-ignore:vglayout">
+            <table cellspacing="0" cellpadding="0" align="left">
+              <tbody>
+                <tr>
+                  <td width="0" height="19"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><a href="https://www.winoagroup.com/en"
+                      moz-do-not-send="true"><img
+                        src="cid:part1.LXxPU2OX.7kEAIBSQ@torulog.com.br"
+                        v:shapes="Imagem_x0020_5" class="" width="533"
+                        height="164" border="0"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </span><!--[endif]--><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669"><o:p> </o:p></span></p>
+        <br style="mso-ignore:vglayout" clear="ALL">
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669">Ludmila
+            Diniz<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt;font-family:Roboto;color:#596669">Intern<br>
+            Winoa do Brasil<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Av.Industrial,
+            500 – Jacareí -SP<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Tel.
+            +55 (12) 3954-4279<br>
+            <u>ludmila.diniz@</u></span><span style="font-size:11.0pt"><a
+              href="https://www.winoagroup.com/" target="_blank"
+              moz-do-not-send="true"><span
+                style="font-size:9.0pt;font-family:Roboto;color:#596669">winoa.com</span></a></span><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt"><img id="Imagem_x0020_10"
+              src="cid:part2.VOBceyqJ.Po1GRxRo@torulog.com.br" class=""
+              width="272" height="32" border="0"></span><span
+            style="font-size:11.0pt" lang="EN-US"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <p class="MsoNormal"
+style="margin-bottom:7.5pt;text-align:justify;background:white"><i><span
+              style="font-size:7.5pt;font-family:Roboto;color:#5A6669"
+              lang="EN-US">Please consider the environment before
+              printing this email.<o:p></o:p></span></i></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <div
+style="border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+          <p class="MsoNormal"><b><span style="font-size:11.0pt">De:</span></b><span
+              style="font-size:11.0pt"> Vendas &lt;<a
+                href="mailto:vendas@quimlab.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">vendas@quimlab.com.br</a>&gt;
+              <br>
+              <b>Enviada em:</b> segunda-feira, 22 de janeiro de 2024
+              13:18<br>
+              <b>Para:</b> Ludmila DINIZ &lt;<a
+                href="mailto:ludmila.diniz@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">ludmila.diniz@winoa.com</a>&gt;;
+              'Fabricio' &lt;<a
+                href="mailto:fabricio.correia@torulog.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">fabricio.correia@torulog.com.br</a>&gt;<br>
+              <b>Cc:</b> 'Lilian' &lt;<a
+                href="mailto:lilian.sene@torulog.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">lilian.sene@torulog.com.br</a>&gt;;
+              'TORULOG LOGISTICA LTDA' &lt;<a
+                href="mailto:planejamento@torulog.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">planejamento@torulog.com.br</a>&gt;;
+              Geysa SANTOS &lt;<a href="mailto:geysa.santos@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">geysa.santos@winoa.com</a>&gt;<br>
+              <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white">Boa tarde! Material
+              não está disponível para coleta, no momento é necessário
+              somente a definição da transportadora para inserir ao
+              pedido. Quando ficar pronto entraremos em contato com a
+              mesma. Qualquer dúvida, estou à disposição. *A Nivia <o:p></o:p></span></p>
+        </div>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white"><o:p> </o:p></span></p>
+        </div>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Boa
+            tarde!<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Material
+            não está disponível para coleta, no momento é necessário
+            somente a definição da transportadora para inserir ao
+            pedido.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Quando
+            ficar pronto entraremos em contato com a mesma.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Qualquer
+            dúvida, estou à disposição.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">*A
+            Nivia está de férias.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Atenciosamente
+          </span><span
+style="font-family:&quot;Comic Sans MS&quot;;color:black;background:white">.</span><span
+style="font-size:30.0pt;font-family:Wingdings;color:black;background:white">?</span><span
+            style="font-size:11.0pt;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><b><span
+              style="font-size:11.0pt;color:black">Aline Ribeiro<o:p></o:p></span></b></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Depto
+            Comercial - Telefone: (12) <b>3955-4642</b><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Quimlab
+            Produtos de Quimica Fina Ltda<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Visite
+            Nosso Site : <a
+href="https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!NJVD7L2i486OHEPxAB6UhMKllem4BmoM3dKmdGvW3w0bnHTxKo5CoOAERKPNAnUmhj3O6O__MTT9l53-6y7Crw$"
+              moz-do-not-send="true"><span style="color:black">http://quimlab.com.br/</span></a><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">Empresas
+            do grupo <b>QUIMLAB</b>:<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Laboratórios Químicos e Metrológicos Quimlab Ltda
+            (02.236.210/0001-09)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Instituto Granado de Química e Polímeros Sociedade
+            Unipessoal Ltda (26.269.070/0001-33)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt;color:black">-
+            Quimlab Produtos Científicos Ltda (12.850.204/0001-09)
+            -Produtos importados<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <div>
+          <div
+style="border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+            <p class="MsoNormal"><b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">De:</span></b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ludmila
+                DINIZ [<a href="mailto:ludmila.diniz@winoa.com"
+                  moz-do-not-send="true">mailto:ludmila.diniz@winoa.com</a>]
+                <br>
+                <b>Enviada em:</b> segunda-feira, 22 de janeiro de 2024
+                08:11<br>
+                <b>Para:</b> Vendas; Fabricio<br>
+                <b>Cc:</b> Lilian; 'TORULOG LOGISTICA LTDA'; Geysa
+                SANTOS<br>
+                <b>Assunto:</b> ENC: Pedido de Compra - 01012<o:p></o:p></span></p>
+          </div>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Bom dia
+            Fabricio!<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Como vai?<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Pode agendar
+            coleta, por gentileza.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <table class="MsoNormalTable"
+          style="width:48.58%;border-collapse:collapse" width="48%"
+          cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="width:100.0%;padding:0cm 0cm 0cm 0cm"
+                width="100%" valign="bottom">
+                <p class="MsoNormal"
+style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;vertical-align:baseline"><b><u><span
+                        style="color:black">Quimlab Produtos de Química
+                        Fina Ltda </span></u></b><span
+                    style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0cm 0cm 0cm 0cm" valign="bottom"><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0cm 0cm 0cm 0cm" valign="bottom">
+                <p class="MsoNormal"
+style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;vertical-align:baseline"><span
+                    style="color:black">Rod. Geraldo Scavone, 2300 - Jd.
+                    Califórnia - CEP: 12305-490, Galpão 10.<br>
+                    <b>Jacareí/SP</b></span><span
+                    style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- Valor da NF: R$ 358,51 + valor do
+            frete</span><o:p></o:p></p>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- MEDIDAS: +/- 1 volume(28cm x 31,5cm x
+            41,5cm) </span><o:p></o:p></p>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- PESO: +/- 7 kg</span><o:p></o:p></p>
+        <p class="MsoNormal"><span style="color:black;background:yellow">Produto
+            Químico Classificado.</span><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Obrigada,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape id="Imagem_x0020_4" o:spid="_x0000_s1028" type="#_x0000_t75" href="https://www.winoagroup.com/en" style='position:absolute;margin-left:0;margin-top:14.05pt;width:399.75pt;height:123pt;z-index:251663360;visibility:visible;mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:left;mso-position-horizontal-relative:margin;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:margin' o:button="t">
+<v:fill o:detectmouseclick="t" />
+<v:imagedata src="imap://fabricio%2Ecorreia%40torulog%2Ecom%2Ebr@mail.torulog.com.br:993/fetch%3EUID%3E.INBOX%3E29386?header=quotebody&part=1.2&filename=image001.png" o:title="" />
+<o:lock v:ext="edit" aspectratio="f" />
+<w:wrap anchorx="margin"/>
+</v:shape><![endif]--><!--[if !vml]--><span style="mso-ignore:vglayout">
+            <table cellspacing="0" cellpadding="0" align="left">
+              <tbody>
+                <tr>
+                  <td width="0" height="19"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><a href="https://www.winoagroup.com/en"
+                      moz-do-not-send="true"><img
+                        src="cid:part1.LXxPU2OX.7kEAIBSQ@torulog.com.br"
+                        v:shapes="Imagem_x0020_4" class="" width="533"
+                        height="164" border="0"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </span><!--[endif]--><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669"><o:p> </o:p></span></p>
+        <br style="mso-ignore:vglayout" clear="ALL">
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669">Ludmila
+            Diniz<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt;font-family:Roboto;color:#596669">Intern<br>
+            Winoa do Brasil<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Av.Industrial,
+            500 – Jacareí -SP<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Tel.
+            +55 (12) 3954-4279<br>
+            <u>ludmila.diniz@</u></span><span style="font-size:11.0pt"><a
+              href="https://www.winoagroup.com/" target="_blank"
+              moz-do-not-send="true"><span
+                style="font-size:9.0pt;font-family:Roboto;color:#596669">winoa.com</span></a></span><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt"><img id="Imagem_x0020_8"
+              src="cid:part2.VOBceyqJ.Po1GRxRo@torulog.com.br" class=""
+              width="272" height="32" border="0"></span><span
+            style="font-size:11.0pt" lang="EN-US"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <p class="MsoNormal"
+style="margin-bottom:7.5pt;text-align:justify;background:white"><i><span
+              style="font-size:7.5pt;font-family:Roboto;color:#5A6669"
+              lang="EN-US">Please consider the environment before
+              printing this email.<o:p></o:p></span></i></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <div
+style="border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+          <p class="MsoNormal"><b><span style="font-size:11.0pt">De:</span></b><span
+              style="font-size:11.0pt"> Vendas &lt;<a
+                href="mailto:vendas@quimlab.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">vendas@quimlab.com.br</a>&gt;
+              <br>
+              <b>Enviada em:</b> sexta-feira, 19 de janeiro de 2024
+              14:33<br>
+              <b>Para:</b> Ludmila DINIZ &lt;<a
+                href="mailto:ludmila.diniz@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">ludmila.diniz@winoa.com</a>&gt;<br>
+              <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white">Boa tarde Ludmila, A
+              definição da transportadora precisa ser antes da emissão
+              da NF. Segue dados da caixa: CNPJ faturamento: IGTPAN
+              CNPJ: 26. 269. 070/0001-33 LOCAL DA COLETA: Quimlab
+              Produtos de Química Fina Ltda Rod. Geraldo Scavone, 2300 -
+              <o:p></o:p></span></p>
+        </div>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white"><o:p> </o:p></span></p>
+        </div>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Boa
+            tarde Ludmila,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">A
+            definição da transportadora precisa ser antes da emissão da
+            NF.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Segue
+            dados da caixa:<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <table class="MsoNormalTable" style="width:32.38%" width="32%"
+          cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="width:100.0%;padding:0cm 0cm 0cm 0cm"
+                width="100%">
+                <p class="MsoNormal"
+style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+                    style="color:black">CNPJ faturamento: <b>IGTPAN
+                      CNPJ:</b></span> <b><span style="color:black">26.269.070/0001-33</span></b><span
+                    style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><b><span
+              style="color:black">LOCAL DA COLETA:  </span></b><o:p></o:p></p>
+        <table class="MsoNormalTable"
+          style="width:48.58%;border-collapse:collapse" width="48%"
+          cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="width:100.0%;padding:0cm 0cm 0cm 0cm"
+                width="100%" valign="bottom">
+                <p class="MsoNormal"
+style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;vertical-align:baseline"><b><u><span
+                        style="color:black">Quimlab Produtos de Química
+                        Fina Ltda </span></u></b><span
+                    style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0cm 0cm 0cm 0cm" valign="bottom"><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0cm 0cm 0cm 0cm" valign="bottom">
+                <p class="MsoNormal"
+style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;vertical-align:baseline"><span
+                    style="color:black">Rod. Geraldo Scavone, 2300 - Jd.
+                    Califórnia - CEP: 12305-490, Galpão 10.<br>
+                    <b>Jacareí/SP</b></span><span
+                    style="font-size:12.0pt"><o:p></o:p></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- Valor da NF: R$ 358,51 + valor do
+            frete</span><o:p></o:p></p>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- MEDIDAS: +/- 1 volume(28cm x 31,5cm x
+            41,5cm) </span><o:p></o:p></p>
+        <p class="MsoNormal"
+          style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span
+            style="color:black">- PESO: +/- 7 kg</span><o:p></o:p></p>
+        <p class="MsoNormal"><span style="color:black;background:yellow">Produto
+            Químico Classificado.</span><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Qualquer
+            dúvida, estou à disposição.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Atenciosamente
+          </span><span
+style="font-family:&quot;Comic Sans MS&quot;;color:black;background:white">.</span><span
+style="font-size:30.0pt;font-family:Wingdings;color:black;background:white">?</span><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></b></p>
+        <p class="MsoNormal"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Nivia
+              Rodrigues<o:p></o:p></span></b></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Depto
+            Comercial - Telefone: (12) <b>3955-4642</b><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Quimlab
+            Produtos de Quimica Fina Ltda<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Visite
+            Nosso Site : <a
+href="https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!JapCe2FXTFoF57e60tQA2NkdNScem2vuRb0QbEDSakTc-NQxsa2UuEcxp9RNVetWL75omDIBt7v4CwK7GphbhQ$"
+              moz-do-not-send="true"><span style="color:black">http://quimlab.com.br/</span></a><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Empresas
+            do grupo <b>QUIMLAB</b>:<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Laboratórios Químicos e Metrológicos Quimlab Ltda
+            (02.236.210/0001-09)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Instituto Granado de Química e Polímeros Sociedade
+            Unipessoal Ltda (26.269.070/0001-33)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Quimlab Produtos Científicos Ltda (12.850.204/0001-09)
+            -Produtos importados<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <div>
+          <div
+style="border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+            <p class="MsoNormal"><b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">De:</span></b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ludmila
+                DINIZ [<a href="mailto:ludmila.diniz@winoa.com"
+                  moz-do-not-send="true">mailto:ludmila.diniz@winoa.com</a>]
+                <br>
+                <b>Enviada em:</b> sexta-feira, 19 de janeiro de 2024
+                14:17<br>
+                <b>Para:</b> Vendas<br>
+                <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+          </div>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Boa tarde,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Assim que o
+            pedido estiver pronto, por favor me envie as dimensões do
+            material e o endereço para que eu possa agendar a coleta.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Obrigada,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape id="Imagem_x0020_3" o:spid="_x0000_s1027" type="#_x0000_t75" href="https://www.winoagroup.com/en" style='position:absolute;margin-left:0;margin-top:14.05pt;width:399.75pt;height:123pt;z-index:251661312;visibility:visible;mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:left;mso-position-horizontal-relative:margin;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:margin' o:button="t">
+<v:fill o:detectmouseclick="t" />
+<v:imagedata src="imap://fabricio%2Ecorreia%40torulog%2Ecom%2Ebr@mail.torulog.com.br:993/fetch%3EUID%3E.INBOX%3E29386?header=quotebody&part=1.2&filename=image001.png" o:title="" />
+<o:lock v:ext="edit" aspectratio="f" />
+<w:wrap anchorx="margin"/>
+</v:shape><![endif]--><!--[if !vml]--><span style="mso-ignore:vglayout">
+            <table cellspacing="0" cellpadding="0" align="left">
+              <tbody>
+                <tr>
+                  <td width="0" height="19"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><a href="https://www.winoagroup.com/en"
+                      moz-do-not-send="true"><img
+                        src="cid:part1.LXxPU2OX.7kEAIBSQ@torulog.com.br"
+                        v:shapes="Imagem_x0020_3" class="" width="533"
+                        height="164" border="0"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </span><!--[endif]--><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669"><o:p> </o:p></span></p>
+        <br style="mso-ignore:vglayout" clear="ALL">
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669">Ludmila
+            Diniz<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt;font-family:Roboto;color:#596669">Intern<br>
+            Winoa do Brasil<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Av.Industrial,
+            500 – Jacareí -SP<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Tel.
+            +55 (12) 3954-4279<br>
+            <u>ludmila.diniz@</u></span><span style="font-size:11.0pt"><a
+              href="https://www.winoagroup.com/" target="_blank"
+              moz-do-not-send="true"><span
+                style="font-size:9.0pt;font-family:Roboto;color:#596669">winoa.com</span></a></span><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt"><img id="Imagem_x0020_6"
+              src="cid:part2.VOBceyqJ.Po1GRxRo@torulog.com.br" class=""
+              width="272" height="32" border="0"></span><span
+            style="font-size:11.0pt" lang="EN-US"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <p class="MsoNormal"
+style="margin-bottom:7.5pt;text-align:justify;background:white"><i><span
+              style="font-size:7.5pt;font-family:Roboto;color:#5A6669"
+              lang="EN-US">Please consider the environment before
+              printing this email.<o:p></o:p></span></i></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <div
+style="border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+          <p class="MsoNormal"><b><span style="font-size:11.0pt">De:</span></b><span
+              style="font-size:11.0pt"> Vendas &lt;<a
+                href="mailto:vendas@quimlab.com.br"
+                moz-do-not-send="true" class="moz-txt-link-freetext">vendas@quimlab.com.br</a>&gt;
+              <br>
+              <b>Enviada em:</b> sexta-feira, 19 de janeiro de 2024
+              14:13<br>
+              <b>Para:</b> Ludmila DINIZ &lt;<a
+                href="mailto:ludmila.diniz@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">ludmila.diniz@winoa.com</a>&gt;<br>
+              <b>Cc:</b> Geysa SANTOS &lt;<a
+                href="mailto:geysa.santos@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">geysa.santos@winoa.com</a>&gt;;
+              Solange CAVALCANTI &lt;<a
+                href="mailto:solange.cavalcanti@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">solange.cavalcanti@winoa.com</a>&gt;;
+              Sthefani PRADO &lt;<a
+                href="mailto:sthefani.prado@winoa.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">sthefani.prado@winoa.com</a>&gt;<br>
+              <b>Assunto:</b> RES: Pedido de Compra - 01012<o:p></o:p></span></p>
+        </div>
+        <p class="MsoNormal"><o:p> </o:p></p>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white">Boa tarde Ludmila ok,
+              favor considerar frete FOB no seu pedido. Muito
+              obrigado(a) pela confiança e preferência. Já estou
+              enviando o seu material para a produção. Segue em anexo
+              espelho do pedido. A respeito do seu pedido: Nº Interno do
+              PedidoEndereço <o:p></o:p></span></p>
+        </div>
+        <div>
+          <p class="MsoNormal" style="mso-line-height-alt:.75pt"><span
+              style="font-size:1.0pt;color:white"><o:p> </o:p></span></p>
+        </div>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Boa
+            tarde Ludmila ok, favor considerar frete <b>FOB</b> no seu
+            pedido. <o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Muito
+            obrigado(a) pela confiança e preferência.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Já
+            estou enviando o seu material para a produção.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Segue
+            em anexo espelho do pedido.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">A
+            respeito do seu pedido: <o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <table class="MsoNormalTable"
+style="width:591.8pt;margin-left:3.15pt;border-collapse:collapse"
+          width="789" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr style="height:24.35pt">
+              <td
+style="width:103.2pt;border:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:24.35pt"
+                width="138">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Nº
+                      Interno do Pedido<o:p></o:p></span></b></p>
+              </td>
+              <td
+style="width:127.15pt;border:solid windowtext 1.0pt;border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:24.35pt"
+                width="170">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black;background:yellow;mso-highlight:yellow">Endereço
+                      de entrega<o:p></o:p></span></b></p>
+              </td>
+              <td
+style="width:120.5pt;border:solid windowtext 1.0pt;border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:24.35pt"
+                width="161">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Forma
+                      de Envio<o:p></o:p></span></b></p>
+              </td>
+              <td
+style="width:127.55pt;border:solid windowtext 1.0pt;border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:24.35pt"
+                width="170">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Previsão
+                      de envio<o:p></o:p></span></b></p>
+              </td>
+              <td
+style="width:4.0cm;border:solid windowtext 1.0pt;border-left:none;padding:0cm 3.5pt 0cm 3.5pt;height:24.35pt"
+                width="151">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Forma
+                      de Pagamento<o:p></o:p></span></b></p>
+              </td>
+            </tr>
+            <tr style="height:31.5pt">
+              <td
+style="width:103.2pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 3.5pt 0cm 3.5pt;height:31.5pt"
+                width="138">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">83652<o:p></o:p></span></p>
+              </td>
+              <td
+style="width:127.15pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:31.5pt"
+                width="170">
+                <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black;background:yellow;mso-highlight:yellow">Av
+                    Industrial 500, Jardim Emilia, Cep: 12321-500,
+                    Jacareí/SP<o:p></o:p></span></p>
+              </td>
+              <td
+style="width:120.5pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:31.5pt"
+                width="161">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">A
+                    definir pelo cliente<o:p></o:p></span></p>
+              </td>
+              <td
+style="width:127.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:31.5pt"
+                width="170">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">8
+                    à 12 dias úteis<o:p></o:p></span></p>
+              </td>
+              <td
+style="width:4.0cm;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 3.5pt 0cm 3.5pt;height:31.5pt"
+                width="151">
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Transferência
+                    Bancária para 45 DDL<o:p></o:p></span></p>
+                <p class="MsoNormal" style="text-align:center"
+                  align="center"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">(Data
+                    fixa nos dias 6 e 21)<o:p></o:p></span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Qualquer
+            dúvida, estou à disposição.<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Atenciosamente
+          </span><span
+style="font-family:&quot;Comic Sans MS&quot;;color:black;background:white">.</span><span
+style="font-size:30.0pt;font-family:Wingdings;color:black;background:white">?</span><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><b><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></b></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Nivia
+            Rodrigues<b><o:p></o:p></b></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Depto
+            Comercial - Telefone: (12) <b>3955-4642</b><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Quimlab
+            Produtos de Quimica Fina Ltda<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Visite
+            Nosso Site : <a
+href="https://urldefense.com/v3/__http:/quimlab.com.br/__;!!Ax27-BE!MDnO_LPLev5W01psgzMHNSY239pNE49bxDSR21GtM9trB5C5Lvgs2swHFhJHRS8jB8YVVm2VNBOXKUg80G_RjQ$"
+              moz-do-not-send="true"><span style="color:black">http://quimlab.com.br/</span></a><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">Empresas
+            do grupo <b>QUIMLAB</b>:<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Laboratórios Químicos e Metrológicos Quimlab Ltda
+            (02.236.210/0001-09)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Quimlab Produtos de Química Fina Ltda (07.411.821/0001-60)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Instituto Granado de Química e Polímeros Sociedade
+            Unipessoal Ltda (26.269.070/0001-33)<o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;color:black">-
+            Quimlab Produtos Científicos Ltda (12.850.204/0001-09)
+            -Produtos importados</span><span
+            style="font-size:11.0pt;color:black"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span
+            style="font-size:11.0pt;color:#1F497D"><o:p> </o:p></span></p>
+        <div>
+          <div
+style="border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0cm 0cm">
+            <p class="MsoNormal"><b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;">De:</span></b><span
+style="font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;"> Ludmila
+                DINIZ [<a href="mailto:ludmila.diniz@winoa.com"
+                  moz-do-not-send="true">mailto:ludmila.diniz@winoa.com</a>]
+                <br>
+                <b>Enviada em:</b> sexta-feira, 19 de janeiro de 2024
+                13:38<br>
+                <b>Para:</b> Vendas<br>
+                <b>Cc:</b> Geysa SANTOS; Solange CAVALCANTI; Sthefani
+                PRADO<br>
+                <b>Assunto:</b> Pedido de Compra - 01012<o:p></o:p></span></p>
+          </div>
+        </div>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Bom dia,<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-bottom:12.0pt"><span
+            style="font-size:11.0pt"><br>
+            Segue pedido <b><span
+                style="background:yellow;mso-highlight:yellow">01012</span>.
+            </b>Proceder conforme negociação e entrega o quanto antes.<b><u><span
+                  style="color:red"><o:p></o:p></span></u></b></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Os <b><u>recebimentos
+                ocorrerão nos períodos mencionados abaixo:<o:p></o:p></u></b></span></p>
+        <p class="MsoNormal"
+          style="margin-left:144.0pt;text-indent:36.0pt"><span
+            style="font-size:11.0pt">-   JANEIRO: entre os dias 04 e 29<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">--<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><b><u><span
+                style="font-size:11.0pt;color:#C00000">INSTRUÇÕES GERAIS
+                PARA O ACEITE DO PEDIDO<o:p></o:p></span></u></b></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <ul style="margin-top:0cm" type="disc">
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><span
+              style="font-size:11.0pt">Solicitamos confirmar o
+              recebimento deste pedido, assim como ler atentamente as
+              condições presentes no pedido de compra;<o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><span
+              style="font-size:11.0pt">Gostaria de ressaltar que nossas
+              datas fixas para <b><u>pagamento são</u></b><u> <b>6 e
+                  21, via transferência bancária;</b></u><o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><span
+              style="font-size:11.0pt">Não faturar acima do volume e
+              valor solicitado sem prévia aprovação, sujeito à recusa no
+              recebimento;<o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><u><span
+                style="font-size:11.0pt">Inserir na nota o número do
+                pedido</span></u><span style="font-size:11.0pt"> para
+              nos auxiliar no controle de recebimento;<o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><b><span
+                style="font-size:11.0pt">Todas as NFs devem ser enviadas
+                para:</span></b><span style="font-size:11.0pt"> <a
+                href="mailto:nfe.fornecedor@winoagroup.com"
+                moz-do-not-send="true" class="moz-txt-link-freetext">nfe.fornecedor@winoagroup.com</a>
+              – o envio para outros endereços eletrônicos pode acarretar
+              atraso nos pagamentos.<o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><b><span
+                style="font-size:11.0pt">Horário de recebimento</span></b><span
+              style="font-size:11.0pt"> – <b>manhã: 08 às 12h | tarde:
+                13:30h às 16h</b><o:p></o:p></span></li>
+          <li class="MsoNormal" style="mso-list:l0 level1 lfo1"><span
+              style="font-size:11.0pt">O motorista que fará a entrega
+              deverá <b><u>obrigatoriamente</u></b> usar os EPI’s:<o:p></o:p></span></li>
+          <ul style="margin-top:0cm" type="circle">
+            <ul style="margin-top:0cm" type="square">
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><a
+                  name="_Hlk76130212" moz-do-not-send="true"><span
+                    style="font-size:11.0pt">Capacete;</span></a><span
+                  style="font-size:11.0pt"><o:p></o:p></span></li>
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><span
+                  style="font-size:11.0pt">Óculos de proteção;<o:p></o:p></span></li>
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><span
+                  style="font-size:11.0pt">Protetor auricular;<o:p></o:p></span></li>
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><span
+                  style="font-size:11.0pt">Colete de sinalização;<o:p></o:p></span></li>
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><span
+                  style="font-size:11.0pt">Sapato de segurança;<o:p></o:p></span></li>
+              <li class="MsoNormal" style="mso-list:l0 level3 lfo1"><span
+                  style="font-size:11.0pt">Luva de vaqueta ou
+                  pigmentada;<o:p></o:p></span></li>
+            </ul>
+          </ul>
+        </ul>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt">Obrigada,<o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt"><o:p> </o:p></span></p>
+        <p class="MsoNormal"><!--[if gte vml 1]><v:shape id="Agrupar_x0020_26" o:spid="_x0000_s1026" type="#_x0000_t75" href="https://www.winoagroup.com/en" style='position:absolute;margin-left:0;margin-top:14.05pt;width:399.75pt;height:123pt;z-index:251659264;visibility:visible;mso-wrap-style:square;mso-width-percent:0;mso-height-percent:0;mso-wrap-distance-left:9pt;mso-wrap-distance-top:0;mso-wrap-distance-right:9pt;mso-wrap-distance-bottom:0;mso-position-horizontal:left;mso-position-horizontal-relative:margin;mso-position-vertical:absolute;mso-position-vertical-relative:text;mso-width-percent:0;mso-height-percent:0;mso-width-relative:page;mso-height-relative:margin' o:button="t">
+<v:fill o:detectmouseclick="t" />
+<v:imagedata src="imap://fabricio%2Ecorreia%40torulog%2Ecom%2Ebr@mail.torulog.com.br:993/fetch%3EUID%3E.INBOX%3E29386?header=quotebody&part=1.2&filename=image001.png" o:title="" />
+<o:lock v:ext="edit" aspectratio="f" />
+<w:wrap anchorx="margin"/>
+</v:shape><![endif]--><!--[if !vml]--><span style="mso-ignore:vglayout">
+            <table cellspacing="0" cellpadding="0" align="left">
+              <tbody>
+                <tr>
+                  <td width="0" height="19"><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br>
+                  </td>
+                  <td><a href="https://www.winoagroup.com/en"
+                      moz-do-not-send="true"><img
+                        src="cid:part1.LXxPU2OX.7kEAIBSQ@torulog.com.br"
+                        v:shapes="Agrupar_x0020_26" class="" width="533"
+                        height="164" border="0"></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </span><!--[endif]--><a name="_Hlk118893473"
+            moz-do-not-send="true"></a><a name="_Hlk118884403"
+            moz-do-not-send="true"></a><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669"><o:p> </o:p></span></p>
+        <br style="mso-ignore:vglayout" clear="ALL">
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.5pt;font-family:Roboto;color:#596669">Ludmila
+            Diniz<o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt;font-family:Roboto;color:#596669">Intern<br>
+            Winoa do Brasil<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Av.Industrial,
+            500 – Jacareí -SP<o:p></o:p></span></p>
+        <p class="MsoNormal"
+style="mso-margin-top-alt:0cm;margin-right:0cm;margin-bottom:4.0pt;margin-left:141.6pt;line-height:12.0pt"><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669">Tel.
+            +55 (12) 3954-4279<br>
+            <u>ludmila.diniz@</u></span><span style="font-size:11.0pt"><a
+              href="https://www.winoagroup.com/" target="_blank"
+              moz-do-not-send="true"><span
+                style="font-size:9.0pt;font-family:Roboto;color:#596669">winoa.com</span></a></span><span
+            style="font-size:9.0pt;font-family:Roboto;color:#596669"><o:p></o:p></span></p>
+        <p class="MsoNormal" style="margin-left:141.6pt"><span
+            style="font-size:11.0pt"><img id="Imagem_x0020_1"
+              src="cid:part2.VOBceyqJ.Po1GRxRo@torulog.com.br" class=""
+              width="272" height="32" border="0"></span><span
+            style="font-size:11.0pt" lang="EN-US"><o:p></o:p></span></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+        <p class="MsoNormal"
+style="margin-bottom:7.5pt;text-align:justify;background:white"><i><span
+              style="font-size:7.5pt;font-family:Roboto;color:#5A6669"
+              lang="EN-US">Please consider the environment before
+              printing this email.<o:p></o:p></span></i></p>
+        <p class="MsoNormal"><span style="font-size:11.0pt" lang="EN-US"><o:p> </o:p></span></p>
+      </div>
+    </blockquote>
+  </body>
+</html>
+--------------baedTs7OjiGGHfpQvBpaXQ71
+Content-Type: image/png; name="image001.png"
+Content-Disposition: inline; filename="image001.png"
+Content-Id: <part1.LXxPU2OX.7kEAIBSQ@torulog.com.br>
+Content-Transfer-Encoding: base64
+
+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
+rkJggg==
+--------------baedTs7OjiGGHfpQvBpaXQ71
+Content-Type: image/gif; name="image002.gif"
+Content-Disposition: inline; filename="image002.gif"
+Content-Id: <part2.VOBceyqJ.Po1GRxRo@torulog.com.br>
+Content-Transfer-Encoding: base64
+
+R0lGODlhEAEgAHcAMSH/C01TT0ZGSUNFOS4wFQAAAAlwSFlzAAAOwwAADsMBx2+oZAAh/wtN
+U09GRklDRTkuMBgAAAAMbXNPUE1TT0ZGSUNFOS4wKCoifUAALAAAAAAQASAAhVlmaWhzdml0
+d3eAgniBg27DiYSMjpGYmYWNj5GYmo6Vl4SLjYOLjpmfoJyipJ2jpJqgorG2t6esraitrrK2
+t66ztLu/wLzAwNfZ2c7Q0cXIyc7R0tfZ2sLiy9/h4eLx5vf4+PDw8Ofp6eDh4vj4+PDx8ejp
+6f///wECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwECAwEC
+AwECAwECAwECAwECAwECAwECAwECAwb/wJNwSCwaj8ikcslsOp/QqHRKrVqv2Kx2y+16v2Bo
+Z0wum8/nT3jNbrvf34J8Tq/b7R24fs/v+/+AgYKDhIWGh4iJiouMjY6PkJGSk5SVlpeYmZqb
+cCAeFqAeIJxDIRigGSKSIREGAK8ADhmjpF4hErC5EiGbGAe5rwEWtIsgEcC5Axi1XBbIwBaY
+IL/PwR7FrrkIBMARzFm4uQkjCMASliDZsA8XyBmJ6cAIJyPIGmAivJPOwCP0yNEoqXslgMSJ
+CcACqOKTwRuSY/2EIAS2cIgnfUZEVLToAeMJAAGtWHDoJgSyCUMm5vJ44hMxIiEsXCMCwsKB
+A7LaaEC2QQgJ/wHADBjJ8O7IJ30xQSkNueQmEpPAUAopATTXgSIiQCIJ4GAogHNDtF4xMACO
+BAIXLnArOIQqALQXBIAdsnNmTH0YACwbIiIAAJwDhLIJkODCxHl0X6FFuHfIryGfhuDie3MA
+AANOm2Q2gqsEPQQCPA9p98BgO5axhJgEa5KpEMsAMIqN9NbgCQQXilxA/DNAEQ9ij9074cyj
+gQAzT4wyJZMjUX0eZkXJK9UEAH9ECFRPTcTZQlf6DgjuDiB5S+mlMKQ6IR4Dho0nLFMQYiJ3
+Eak/AQx3XPZEBgC+nZBXY0LktRNJAMDmwEIOwCLCfwAGhEE270QQwTTDiXDANREEEP9ABPpI
+YFl/UAAHwANTDdFTiic88Ip5H3V1giuCORCgEMC5RhwsglEDwCzZfAgFP9iZ4BMH9PnEzY0F
+/ngCVMN9ZYQzM8UDoEMZ+AUge7kUJQQs2A2RwIpDuCglEceMYqNeO77EXlk2hjWABRoEMMAo
+f51yHgYNqhKAAeqp4lRgQhTnDCh2+gdSZFHs9AqSKgJA5gkcwOKlEGQ9GUts8ckoxH8wPilE
+XexdpdwxovT5BDUE2CYRW0NQAEsRJnmzk3gt6TdleULgIgIIDYYQwp/XCCpUOkzCAusJGyCg
+gKsbwGLqEP9hYJIGA5xzAImqafVfUWJV+5GOIOhnkgPEOHX/DC8GCBUAWFRSSQU/AMBKwgIJ
+tOpTVbMJkWaH5VrQGnmhgpDBSLpuRhYouFzaFCxSnWACO/MJUc+sRQxwlQGyACDCTvDtONMA
+c1rQoAd5XZqZM0TkguIJJDRAj31uvTJtt3QCYIzO7xbhTAYeAGeqWFlFM5sFWmp1zLujOJWV
+Btd+BExHIxLoBISvvHyBP4UJkUAuVg+Y7QkODAAqEQMWEU+7Wm0G4E03OayEjwBACoFBE3hG
+AjcYE+Hrj+VGIAGTQ8j7UQBwHyCC4UKsDEDLuWgwAgXYVcDBCF/DQtIQgXF8QlbHOAzbSuN+
+6qRYqwWNOi5dZdauM3huGLQon1oW/+oSJsKCQAIvmyBAAuXkAmO5v1zz33G0/vUbm6UrTPgT
+9NZLQQLDkcDABGYG4xXyJwzO1RGGk1xEykQ4TsRAWbfFr6VGQLRXNh4Bt1+OpYcAXum5RhkN
+LQf4ltl/PZuRx4QwClrITwpJI4hoDoKM5wmQRH7xVOHyFB2ZxEJ10diMMxyAgehAIS/yIEI7
+zGGEcp0JhHITWaFi0cF3gMBDLSzVCongKGUt8AQjzIWbBLSlUV2mCLh4ifhs9oqAiAUElsEM
+SLJClraZ6oW8+pxfBoC47iHOQztkQjhgYZ99kdAIOwlJw8CXjBNApIgyJOAZudWE0b0iTELg
+Gyxu54qKWOkmi4bb2SsEI4LRpZFlFklgF5WkCyRYoDE1gRFRxheNU4CiIs0hoAZAATUQTDKS
+iyzQfp50yWKhgiVOGBYs9EUCSNUQQKCcgghoB5lUEiEfUsDaiXyCnYvZDB8sCcHtwDhK24xJ
+CJUKRha/4YQarigutpFjCh3hI9FMAFaZU0giwiGVnRBAb8EIGTGhEA52TAQuVZnLJKyUlokU
+ZjcA0iYhzlgNaW7TCnWqBoCWCQkQbPEZA1BnITzgRl0M851QuEUCr+TKSXigQcAYwCYbsTi4
+SSADBQWoKqPjAX1ewhMY0EBHJMrRjhIzCAA7
+
+--------------baedTs7OjiGGHfpQvBpaXQ71--
+
+--------------oawshXWfl60Smuv6cczj9gzE--

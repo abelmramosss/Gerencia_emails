@@ -1,0 +1,445 @@
+Delivered-To: toruloglogistica@gmail.com
+Received: by 2002:a05:6a10:a6d8:b0:52a:eb75:205 with SMTP id q24csp2609459pxv;
+        Mon, 22 Jan 2024 06:48:56 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFRHrHoxfB+7mQzhBtG9VxPh/Yu0B3sAmfQf3RXh2+EPJwC8zVAMVRk+hn3A+jO/NrLRD4X
+X-Received: by 2002:a17:902:8ec6:b0:1d5:4b18:17d1 with SMTP id x6-20020a1709028ec600b001d54b1817d1mr4407046plo.106.1705934936367;
+        Mon, 22 Jan 2024 06:48:56 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1705934936; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nv4XKff272Pvf+fK2RRnQ4vh9s4QCWUB7KvQdy4hkNc/+KPatamZT9901Hi6xm1EiI
+         MJXVI0LdfM7Xv3+deb8Ul/IVFHmdzxtD2jwpGtRD8CRaTYzygftk6KiERLJs6lImhAOj
+         3cYZcJplKtH/rKK2B01D8ax8dMwc2drsQ2vSadrYo383/wJtsERNOznrdUSQWlfCGBLq
+         /TSHQnYmFochdQ8hRCLGObW8bAz2PRhCuGsiBYqJdVlUpvyLdcB9POdlDu/+imJ415gV
+         FXxiXL39uAXUPmiJwLyW96DFRVaUUlpdz33EEmdkJTogfQiuWvyw70JPNIXf1lz2LLUi
+         rseQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=in-reply-to:from:references:cc:to:content-language:subject
+         :user-agent:mime-version:date:message-id;
+        bh=VGupkkmcxIQerwpL0vqHlJDNfYuqK7Ry0RjTcvFmvIg=;
+        fh=EfgA5dRjx7UUMtpm2DicYgQyLJT7viMnYpfjpxTzbC8=;
+        b=CVoe3nQRcGffA1uKtnkzRGIHYXJ25k8fjQsG9FIpW4U87bXSsPq0SV3xMVa+gO3Wpn
+         XRMT5FOuIId4xLhZeEeRIBKAKYnpaJ+RttoIEIaLCIEf2nd+diwAyciVPWiAJqM4/C11
+         1uPP9Y6Wi4FiLNvKUC8nsNTgHi4AEjNDI+VGjXhLafdj4CpbJ+bz1Nj3mKfNXukTEaoz
+         odcmBAKU2TmZ25d6g/MmChxEXaiknsWoI5bIhu03S9VC99CGMOxx9PcG1VoWozbghN7N
+         BUnJeSWRUI9dpervAPfL2Bnyz7+rCL9ThmCYkTjU+siT8dG6f6XNI/uZbthYlFyorSS2
+         Xljg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of lilian.sene@torulog.com.br designates 35.89.44.37 as permitted sender) smtp.mailfrom=lilian.sene@torulog.com.br
+Return-Path: <lilian.sene@torulog.com.br>
+Received: from omta38.uswest2.a.cloudfilter.net (omta38.uswest2.a.cloudfilter.net. [35.89.44.37])
+        by mx.google.com with ESMTPS id o8-20020a170902bcc800b001d755b10444si1659109pls.463.2024.01.22.06.48.55
+        for <toruloglogistica@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 22 Jan 2024 06:48:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of lilian.sene@torulog.com.br designates 35.89.44.37 as permitted sender) client-ip=35.89.44.37;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of lilian.sene@torulog.com.br designates 35.89.44.37 as permitted sender) smtp.mailfrom=lilian.sene@torulog.com.br
+Received: from eig-obgw-5006a.ext.cloudfilter.net ([10.0.29.179])
+	by cmsmtp with ESMTPS
+	id RhjQrx0Y4oMN9RvbbrqPt5; Mon, 22 Jan 2024 14:48:55 +0000
+Received: from sh-pro16.hostgator.com.br ([162.241.60.112])
+	by cmsmtp with ESMTPS
+	id RvYgrujsNim6ERvYgrStur; Mon, 22 Jan 2024 14:45:54 +0000
+X-Authority-Analysis: v=2.4 cv=Qft1A+Xv c=1 sm=1 tr=0 ts=65ae7fa2
+ a=3doCq9P6mh9rLCyYmCcnvQ==:117 a=3doCq9P6mh9rLCyYmCcnvQ==:17
+ a=dEuoMetlWLkA:10 a=BKpAeEf8ozMA:10 a=r77TgQKjGQsHNAKrUKIA:9 a=1cRiD_rjAAAA:8
+ a=BkpHzsgbAAAA:8 a=6F8FqG5_AAAA:20 a=snI3qt1mAAAA:8 a=tleo1uP1AAAA:8
+ a=QRa09IzVAAAA:8 a=f1D6fg9znIlBND6n9dUA:9 a=PRpDppDLrCsA:10 a=QEXdDO2ut3YA:10
+ a=_vPlxUM9AAAA:8 a=3g80flMcAAAA:8 a=GT1FQX9uAAAA:8 a=pGLkceISAAAA:8
+ a=fys2sDa9AAAA:8 a=5qkDKhbnmqLuoTOGasYA:9 a=BhMdqm2Wqc4Q2JL7t0yJfBCtM/Y=:19
+ a=uobxb96puOPtID8z:21 a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10 a=ouV8bqFNGZoA:10
+ a=0Dyqawe5mDkA:10 a=z6Pj7PA89W7CS5wXn6-b:22 a=NWVoK91CQySWRX1oVYDe:22
+ a=lAIPu-TSoPCgWs-2gwLQ:22 a=blX6IingZl8_hwIj0iom:22 a=W5PwM3NT9M9XMEwHpqia:22
+ a=3s5bzRtwzqGRqLDagN9o:22 a=rMqM1GvqkfZW0-HCbnnT:22 a=3OzwZZK9wuBjIL5KE02K:22
+ a=v-qSr-_IHA66GWFCoi7P:22 a=7YpECbvlQQReuXKdpsOb:22
+Received: from [201.75.167.22] (port=3099 helo=[192.168.0.114])
+	by sh-pro16.hostgator.com.br with esmtpsa  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <lilian.sene@torulog.com.br>)
+	id 1rRvYf-004BWN-12;
+	Mon, 22 Jan 2024 11:45:53 -0300
+Content-Type: multipart/alternative;
+ boundary="------------mjVQZpilN9Dt05GAEn5Oeya5"
+Message-ID: <d2f68fa5-c90e-4344-a11e-83bf6296eeb6@torulog.com.br>
+Date: Mon, 22 Jan 2024 11:45:50 -0300
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Subject: Re: Fatura : 788288 Vecto: 25/01/2024 - DFL TRANSFERENCIA DE CARGAS
+ LTDA
+Content-Language: pt-BR
+To: Genivaldo Silva <gbsilva@dfltransportes.com.br>,
+ PLANEJAMENTO@torulog.com.br
+Cc: "faturamento@dfltransportes.com.br" <faturamento@dfltransportes.com.br>
+References: <refid-sqbygqrwfb5=0scbgqf4v5gbw4.z5r.ag-skk8uj@return.brudam.com.br>
+ <refid-sqbygqrwfb5=0scbgqf4v5gbw4.z5r.ag-skk8uj@return.brudam.com.br>
+ <CALj8kRD_qO-1cA_mVRcnqibfHy3MwFovOthUKqHDoKjK6=QxOA@mail.gmail.com>
+From: Lilian Sene <lilian.sene@torulog.com.br>
+In-Reply-To: <CALj8kRD_qO-1cA_mVRcnqibfHy3MwFovOthUKqHDoKjK6=QxOA@mail.gmail.com>
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - sh-pro16.hostgator.com.br
+X-AntiAbuse: Original Domain - torulog.com.br
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - torulog.com.br
+X-BWhitelist: no
+X-Source-IP: 201.75.167.22
+X-Source-L: No
+X-Exim-ID: 1rRvYf-004BWN-12
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Source-Sender: ([192.168.0.114]) [201.75.167.22]:3099
+X-Source-Auth: lilian.sene@torulog.com.br
+X-Email-Count: 6
+X-Org: HG=hgshared_brpro;ORG=latam;
+X-Source-Cap: cG90ZW4zNjU7cG90ZW4zNjU7c2gtcHJvMTYuaG9zdGdhdG9yLmNvbS5icg==
+X-Local-Domain: yes
+X-CMAE-Envelope: MS4xfAoou1+1Qvmn32jJ5D6VSvDAW5w4KLVqYQghSG+wixQ2r9socO4HW9UDSxk+J2DuOjxuBYp2t+2rOnMW40tMfFItJRx/mSW+1Ynra4MhqhzXmSjEraw9
+ xLjIJKakbqcZTP4UU2qyfx/tdSFDOmvrWYRdIRq7C75+KIE3YEMpy/AtTKCJEztI0WJVJGP4L4HMQxHvrk9ApyZWfMRbFxVOPQnhv21p1O/sTCluaCw9LiqW
+
+This is a multi-part message in MIME format.
+--------------mjVQZpilN9Dt05GAEn5Oeya5
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+Bom dia,
+
+ok
+
+Atenciosamente,
+
+Logo da Empresa <https://www.torulog.com.br/>
+
+*Lilian Sene*
+
+/Relacionamento com Clientes/
+
+Telefone: (12)97409-9825
+
+Endereço: Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí - SP, 
+12327-673
+
+Ícone do instagram <https://www.instagram.com/torulog/> Ícone do 
+WhatsApp 
+<https://api.whatsapp.com/send?phone=5512974099825&text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!> 
+
+
+Em 22/01/2024 08:52, Genivaldo Silva escreveu:
+> Prezados, bom dia.
+>
+> Por favor, acusar recebimento.
+>
+>
+> /
+> /
+>
+> /Lembrando que, o /www.dfltransportes.com.br 
+> <http://www.dfltransportes.com.br/>/ disponibiliza faturas, boletos, 
+> CTEs e minutas para conferência, o que dispensa o envio eletrônico de 
+> fatura, //não sendo motivo de isenção de encargos (entrar em contato 
+> com //comercial@dfltransportes.com.br/ 
+> <mailto:comercial@dfltransportes.com.br>/ para mais informações)./
+>
+> Atenciosamente,
+>
+>
+>
+>
+> //
+>
+>
+>
+> Em seg., 22 de jan. de 2024 às 08:42, DFL Transportes - Cobranca 
+> <noreply@brudam.com.br> escreveu:
+>
+>     *Aviso de Faturamento *
+>
+>     Prezado(a),
+>     Aqui está o resumo da fatura 788288
+>
+>     Vencimento *25/01/2024 *
+>     Forma de pagamento *BOLETO *
+>     Valor *92,12 *
+>     Cliente *TORULOG LOGISTICA - 36.181.161/0001-76 * *JACAREI - SP *
+>     Baixar Anexos
+>     <https://mailinfo.brudam.app.br/bill/?id=ac978cbc-9b8f-449d-8513-88255192f681>
+>
+>     *DISPONÍVEL ATÉ 24/04/2024 *
+>
+>     Para mais informações entre em contato.
+>
+>     DFL TRANSFERENCIA DE CARGAS LTDA - 11.591.040/0001-71
+>     1150352600
+>     SAC@DFLTRANSPORTES.COM.BR
+>     Este email foi enviado para os seguintes destinatários.
+>     PLANEJAMENTO@TORULOG.COM.BR,
+>
+>     Processado por Brudam Software TMS
+>
+--------------mjVQZpilN9Dt05GAEn5Oeya5
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <p>Bom dia,</p>
+    <p>ok<br>
+    </p>
+    <div class="moz-signature">
+      <meta charset="UTF-8">
+      <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+      <style>
+        /* Estilos CSS para a assinatura */
+        @media only screen and (max-width: 600px) {
+            .email-signature {
+                width: 100% !important;
+                max-width: 100% !important;
+                text-align: center !important;
+            }
+            .email-signature img {
+                width: 70px !important;
+            }
+            .email-signature .social-icons {
+                text-align: center !important;
+                margin-top: 10px !important;
+            }
+            .email-signature .social-icons a {
+                display: inline-block !important;
+                margin-right: 5px !important;
+            }
+            .email-signature .banner {
+                text-align: center !important;
+                margin-top: 20px !important;
+            }
+        }
+    </style>
+      <p>Atenciosamente,</p>
+      <table class="email-signature" width="100%" cellspacing="0"
+        cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 1º Logotipo --> <a
+                href="https://www.torulog.com.br/" target="_blank"> <img
+src="https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-hostgator-brasil-v1-0-7%2F557%2F516557%2FLYRHHVhQ%2F936f5c81cf484b6caf1e9584e00a1665&amp;methods=resize%2C500%2C5000"
+                  alt="Logo da Empresa"
+                  style="display: block; border: 0;" width="70"> </a> </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 2º Nome e Cargo -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 14px; margin: 5px 0;">
+                <strong>Lilian Sene</strong> </p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;"> <em>Relacionamento
+                  com Clientes</em> </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 3º Telefone e Endereço -->
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 5px 0;">Telefone:
+                (12)97409-9825</p>
+              <p
+style="font-family: Arial, sans-serif; font-size: 12px; margin: 0;">Endereço:
+                Av. Edouard Six, 540 - G24 - Jardim Paraiba, Jacareí -
+                SP, 12327-673</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: left;">
+              <!-- 4º Ícones de Redes Sociais -->
+              <div class="social-icons"> <a
+                  href="https://www.instagram.com/torulog/"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon-1.png"
+                    alt="Ícone do instagram"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> <a
+href="https://api.whatsapp.com/send?phone=5512974099825&amp;text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20transporte!"
+                  target="_blank"> <img
+src="https://imagepng.org/wp-content/uploads/2017/08/whatsapp-icone-2.png"
+                    alt="Ícone do WhatsApp"
+                    style="display: inline-block; border: 0;" width="20">
+                </a> </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="moz-cite-prefix">Em 22/01/2024 08:52, Genivaldo Silva
+      escreveu:<br>
+    </div>
+    <blockquote type="cite"
+cite="mid:CALj8kRD_qO-1cA_mVRcnqibfHy3MwFovOthUKqHDoKjK6=QxOA@mail.gmail.com">
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <div dir="ltr">
+        <div class="gmail_default"
+style="font-family:verdana,sans-serif;font-size:small;color:#0000ff">
+          <div dir="ltr">
+            <div dir="ltr">
+              <div class="gmail_default">
+                <div class="gmail_default">Prezados, bom dia.</div>
+                <div class="gmail_default"><br>
+                </div>
+                <div class="gmail_default">Por favor,
+                  acusar recebimento.</div>
+                <div class="gmail_default"><br>
+                </div>
+                <div class="gmail_default"><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div dir="ltr" class="gmail_signature"
+            data-smartmail="gmail_signature">
+            <div dir="ltr">
+              <div>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><font
+                    face="verdana, sans-serif"><i><span
+                        style="color:blue"><br>
+                      </span></i></font></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><font
+                    face="verdana, sans-serif"><i><span
+                        style="color:blue">Lembrando que, o </span></i><span
+                      style="color:rgb(34,34,34)"><a
+                        href="http://www.dfltransportes.com.br/"
+                        target="_blank" moz-do-not-send="true"><span
+                          style="color:rgb(17,85,204)">www.dfltransportes.com.br</span></a></span><i><span
+                        style="color:blue"> disponibiliza faturas,
+                        boletos, CTEs e minutas para conferência, o que
+                        dispensa o envio eletrônico de fatura, </span></i></font><i
+                    style="font-family:verdana,sans-serif"><span
+                      style="color:blue">não sendo motivo de isenção de
+                      encargos (entrar em contato com </span></i><span
+                    style="font-family:verdana,sans-serif;color:black"><a
+                      href="mailto:comercial@dfltransportes.com.br"
+                      target="_blank" moz-do-not-send="true"><i><span
+                          style="color:rgb(17,85,204)">comercial@dfltransportes.com.br</span></i></a></span><i
+                    style="font-family:verdana,sans-serif"><span
+                      style="color:blue"> para mais informações).</span></i></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><font
+                    face="verdana, sans-serif"> </font></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><span
+                    style="color:blue"><font face="verdana, sans-serif">Atenciosamente,</font></span></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><span
+                    style="color:blue"><font face="verdana, sans-serif"><br>
+                    </font></span></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><span
+                    style="color:blue"><font face="verdana, sans-serif"><img
+src="https://ci3.googleusercontent.com/mail-sig/AIorK4yyBQSoG8NwaTC81xHeVgL6Lg4StlUX_iCgVHh0aavjRnCJnUVoaitgSp_JzmXCnxPB0BFcPt0"
+                        moz-do-not-send="true"><br>
+                    </font></span></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><span
+                    style="color:blue"><font face="verdana, sans-serif"><br>
+                    </font></span></p>
+                <p class="MsoNormal"
+style="margin-bottom:0cm;line-height:normal;background-image:initial;background-position:initial;background-repeat:initial"><font
+                    face="verdana, sans-serif"><i><span
+                        style="color:blue"></span></i></font></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br>
+      <div class="gmail_quote">
+        <div dir="ltr" class="gmail_attr">Em seg., 22 de jan. de 2024 às
+          08:42, DFL Transportes - Cobranca &lt;<a
+            href="mailto:noreply@brudam.com.br" moz-do-not-send="true"
+            class="moz-txt-link-freetext">noreply@brudam.com.br</a>&gt;
+          escreveu:<br>
+        </div>
+        <blockquote class="gmail_quote"
+style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+          <div class="msg5942146615545845555">
+            <div>
+              <div style="display:grid"> <strong> Aviso de Faturamento
+                </strong>
+                <p> Prezado(a), <br>
+                  Aqui está o resumo da fatura 788288 </p>
+                <div style="display:grid"> <span
+                    class="m_5942146615545845555text-slate"> Vencimento
+                  </span> <strong> 25/01/2024 </strong> </div>
+                <div style="display:grid;margin-top:5px"> <span
+                    class="m_5942146615545845555text-slate"> Forma de
+                    pagamento </span> <strong> BOLETO </strong> </div>
+                <div style="display:grid;margin-top:5px"> <span
+                    class="m_5942146615545845555text-slate"> Valor </span>
+                  <strong> 92,12 </strong> </div>
+                <div style="display:grid;margin-top:5px"> <span
+                    class="m_5942146615545845555text-slate"> Cliente </span>
+                  <span> <strong> TORULOG LOGISTICA -
+                      36.181.161/0001-76 </strong> </span> <span> <strong>
+                      JACAREI - SP </strong> </span> </div>
+                <a class="m_5942146615545845555btn"
+href="https://mailinfo.brudam.app.br/bill/?id=ac978cbc-9b8f-449d-8513-88255192f681"
+                  style="margin-top:10px;margin-bottom:5px"
+                  target="_blank" moz-do-not-send="true"> <span> Baixar
+                    Anexos </span> </a>
+                <div style="display:grid;margin-top:5px"> <strong>
+                    DISPONÍVEL ATÉ 24/04/2024 </strong> </div>
+                <div>
+                  <p class="m_5942146615545845555text-slate"
+                    style="font-size:12px"> Para mais informações entre
+                    em contato. </p>
+                </div>
+                <div> DFL TRANSFERENCIA DE CARGAS LTDA -
+                  11.591.040/0001-71
+                  <div>
+                    <div> 1150352600
+                      <div>
+                        <div> <a
+                            href="mailto:SAC@DFLTRANSPORTES.COM.BR"
+                            target="_blank" moz-do-not-send="true"
+                            class="moz-txt-link-freetext">SAC@DFLTRANSPORTES.COM.BR</a>
+                          <div>
+                            <div
+style="font-size:11px;margin-top:10px;margin-bottom:5px"> <span> Este
+                                email foi enviado para os seguintes
+                                destinatários. </span> <span> <a
+href="mailto:PLANEJAMENTO@TORULOG.COM.BR" target="_blank"
+                                  moz-do-not-send="true"
+                                  class="moz-txt-link-freetext">PLANEJAMENTO@TORULOG.COM.BR</a>,
+                                <span>
+                                  <div>
+                                    <p style="font-size:11px">
+                                      Processado por Brudam Software TMS
+                                    </p>
+                                    <p> </p>
+                                  </div>
+                                </span> </span> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img
+src="https://track.brudam.com.br/open/?h=750.80763.8.sqbygqrwfb5%3D0scbgqf4v5gbw4.z5r.ag-skk8uj.1.3a82dd17&amp;s=ym6ixx7244hdlxzgqdcfnj7sydqm3kpagescxpy3nxnaqpefvs4bivt4yegolb5fs3tiesbm2n66jcfmvbr45acfxh7xpftzhvlxbxdgdab7lzuln3wijyk225wn6xpycwnk5qgxy5gehpohuu2cel3sd4%3D%3D%3D%3D%3D%3D"
+                moz-do-not-send="true" width="1"> </div>
+          </div>
+        </blockquote>
+      </div>
+    </blockquote>
+  </body>
+</html>
+
+--------------mjVQZpilN9Dt05GAEn5Oeya5--
